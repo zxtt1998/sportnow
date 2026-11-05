@@ -11,7 +11,9 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: "prompt",
-      includeAssets: ["icons/*.png", "images/*.svg"],
+      strategies: "injectManifest",
+      srcDir: "src",
+      filename: "sw.ts",
       manifest: {
         id: base,
         name: "SportNow",
@@ -44,24 +46,9 @@ export default defineConfig({
           },
         ],
       },
-      workbox: {
+      injectManifest: {
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
-        cleanupOutdatedCaches: true,
-        navigateFallback: "index.html",
-        // Future news.json is network-first and has a bounded offline fallback.
-        // JSON is deliberately excluded from the build precache above.
-        runtimeCaching: [
-          {
-            urlPattern: /\/data\/news\.json$/,
-            handler: "NetworkFirst",
-            options: {
-              cacheName: "sportnow-news-v1",
-              networkTimeoutSeconds: 4,
-              expiration: { maxEntries: 1, maxAgeSeconds: 3600 },
-              cacheableResponse: { statuses: [200] },
-            },
-          },
-        ],
+        maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
       },
     }),
   ],
