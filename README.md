@@ -164,3 +164,12 @@ src/stores/                     向后兼容设置，新增收藏快照
 2. 在真实 iPhone Safari 与主屏幕模式验收登录无关的阅读、缓存更新和安装；Playwright WebKit 不能替代真机。
 3. 机器翻译仍可能不自然或出错，必须保留原文对照；当前不做人工校对、AI 推荐、实时比分、自建评论、视频下载或云同步。
 4. 启用合法来源后观察 30 天归档大小、模型冷启动、每次翻译预算及 GitHub 定时延迟，再按实际情况调整。
+
+## 第二阶段执行记录（2026-11-05）
+
+- 本地：TypeScript 检查、生产构建、JSON 校验通过；Python 18 项、Vitest 17 项、Playwright 21 项全部通过。浏览器覆盖 iPhone 尺寸的 Chromium/WebKit 和桌面；另实测 `/sportnow/` 子路径、Manifest/SW scope、离线打开和网络恢复，没有页面脚本错误。尚未用真实 iPhone 验收。
+- 本地 RSS：ESPN 16 条、BBC Football 69 条、BBC Champions League 26 条，共读取 111 条。
+- [正式 GitHub 更新运行](https://github.com/zxtt1998/sportnow/actions/runs/41973869034)：BBC 两源分别读取 69/26 条，共 95 条；ESPN XML 解析失败（`no element found: line 1, column 0`），被单独记为失败，没有把 BBC 标为失败。没有改变 User-Agent 或绕过来源限制。
+- 公开新闻 0 条、真实新闻翻译 0 条，均因许可策略关闭，并非将抓取条目数当作发布数量。
+- [独立 Ubuntu Argos 验证](https://github.com/zxtt1998/sportnow/actions/runs/41973024419)：Argos 1.11.0、英中模型 1.9、Python 3.12.16、Linux x86_64，3 句自有文本和翻译缓存验证通过，推理网络被禁用，总耗时 4.13 秒。正式更新中相同测试耗时 5.12 秒，模型缓存命中、准备耗时 3.43 秒。
+- 正式运行日志与 `news-update-evidence` artifact 包含每源状态、数量、缓存和模型报告；后续运行结果可能随来源响应变化。ESPN 在 GitHub 运行环境的返回需要继续观察，不能保证每次可用。

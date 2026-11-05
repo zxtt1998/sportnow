@@ -14,6 +14,8 @@
 
 上述 111 条为第一次探测读到的条目数，不是去重后的公开新闻数量，也不代表成功翻译。后续真实检查数量见 `public/data/sources-status.json` 和 Actions 执行报告。
 
+首次正式 GitHub Actions 更新中，BBC 两源仍为 69/26 条；ESPN 返回未能解析的 XML（`no element found: line 1, column 0`），该源记为失败。云端本次合计读取 95 条，公开发布与真实新闻翻译仍为 0；不把本地可访问性推断成所有运行环境均成功。
+
 ## 核查入口
 
 - [ESPN RSS 说明](https://www.espn.com/espn/news/story?page=rssinfo)
