@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "newsRevision": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "updatedAt": "2026-11-05T05:17:38Z",
+  "updatedAt": "2026-11-05T05:26:18Z",
   "lastSuccessfulUpdate": null,
-  "lastRunStatus": "ok",
+  "lastRunStatus": "partial",
   "counts": {
     "total": 0,
     "nba": 0,
@@ -16,12 +16,16 @@
       "category": "nba",
       "feedUrl": "https://www.espn.com/espn/rss/nba/news",
       "homepageUrl": "https://www.espn.com/nba/",
-      "fetchStatus": "ok",
+      "fetchStatus": "error",
       "publicationStatus": "blocked",
       "lastSuccessAt": "2026-11-05T04:55:53Z",
-      "lastError": null,
-      "httpStatus": 200,
-      "fetchedCount": 16,
+      "lastError": {
+        "code": "ParseError",
+        "message": "no element found: line 1, column 0",
+        "at": "2026-11-05T05:26:18Z"
+      },
+      "httpStatus": null,
+      "fetchedCount": 0,
       "acceptedCount": 0,
       "policyReason": "RSS 可访问，但许可说明页要求机器人验证，未绕过验证；尚未核实公开存储、转载或翻译许可。只显示来源入口，等待明确许可。",
       "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
