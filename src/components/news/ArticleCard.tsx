@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useUser } from "../../stores/UserStore";
 import { sources } from "../../data/entities";
 import { assetUrl, relativeTime, sportLabel } from "../../utils/format";
-import type { Article } from "../../types";
+import type { ArticleView as Article } from "../../types";
 
 export function BookmarkButton({
   article,
@@ -20,7 +20,7 @@ export function BookmarkButton({
       className={`icon-button bookmark-button ${overlay ? "on-image" : ""} ${saved ? "is-saved" : ""}`}
       aria-label={`${saved ? "取消收藏" : "收藏"}：${article.title}`}
       aria-pressed={saved}
-      onClick={() => toggleBookmark(article.id)}
+      onClick={() => toggleBookmark(article.id, article.record)}
     >
       <Bookmark size={19} fill={saved ? "currentColor" : "none"} />
     </button>
@@ -38,13 +38,17 @@ export function ArticleCard({
   const { data } = useUser();
   const read = data.history.some((h) => h.articleId === article.id);
   const source = sources.find((s) => s.id === article.sourceId);
+  const sourceName = article.sourceName || source?.name;
+  const featureImage =
+    article.image ||
+    `images/${article.sport === "football" ? "football" : "basketball"}.svg`;
   if (variant === "feature")
     return (
       <article className={`feature-card ${read ? "was-read" : ""}`}>
-        {article.image && (
+        {featureImage && (
           <img
-            src={assetUrl(article.image)}
-            alt={article.imageAlt}
+            src={assetUrl(featureImage)}
+            alt={article.imageAlt || "SportNow 原创主题插画，非新闻现场照片"}
             className="feature-image"
             fetchPriority="high"
             width="1200"
@@ -61,12 +65,18 @@ export function ArticleCard({
           <BookmarkButton article={article} overlay />
         </div>
         <Link className="feature-body" to={`/article/${article.id}`}>
-          <span className="feature-demo">原创演示 · 战术观察</span>
+          <span className="feature-demo">
+            {article.isDemo
+              ? "原创演示 · 战术观察"
+              : article.record?.titleZh
+                ? "RSS 来源 · 机器翻译"
+                : "RSS 来源 · 英文原标题"}
+          </span>
           <h2>{article.title}</h2>
-          <p>{article.summary}</p>
+          {article.summary && <p>{article.summary}</p>}
           <div className="feature-footer">
             <span>
-              {source?.name} · {relativeTime(article.publishedAt)}
+              {sourceName} · {relativeTime(article.publishedAt)}
               {read ? " · 已读" : ""}
             </span>
             <span className="feature-arrow">
@@ -98,7 +108,13 @@ export function ArticleCard({
             <span className={`sport-text sport-${article.sport}`}>
               {sportLabel(article.sport)}
             </span>
-            <span className="demo-label">演示</span>
+            <span className="demo-label">
+              {article.isDemo
+                ? "演示"
+                : article.record?.titleZh
+                  ? "机译"
+                  : "原文"}
+            </span>
             {read && (
               <span className="read-label">
                 <Check size={11} />
@@ -107,14 +123,14 @@ export function ArticleCard({
             )}
           </div>
           <h3>{article.title}</h3>
-          <p>{article.summary}</p>
+          {article.summary && <p>{article.summary}</p>}
           <div className="article-meta">
-            <span>{source?.name?.replace("SportNow ", "")}</span>
+            <span>{sourceName?.replace("SportNow ", "")}</span>
             <span className="meta-dot">·</span>
             <time dateTime={article.publishedAt}>
               {relativeTime(article.publishedAt)}
             </time>
-            {hot && (
+            {hot && article.isDemo && (
               <span className="heat">
                 <Flame size={12} />
                 {article.demoHeat} 模拟

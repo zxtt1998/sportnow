@@ -1,3 +1,5 @@
+import { NewsStatusPanel } from "../../components/news/NewsStatus";
+import { newsStore } from "../../services/news-store";
 import { useState } from "react";
 import {
   Check,
@@ -115,6 +117,7 @@ export function Settings() {
           </p>
         )}
       </div>
+      <NewsStatusPanel />
       <div className="privacy-note">
         <ShieldCheck size={19} />
         <p>
@@ -140,6 +143,7 @@ export function Settings() {
               className="danger-button"
               onClick={() => {
                 reset();
+                newsStore.clearCache();
                 setResetDone(true);
                 setDialog(null);
               }}
@@ -151,14 +155,15 @@ export function Settings() {
       )}
       {dialog === "about" && (
         <Dialog title="SportNow · 为热爱在场" onClose={() => setDialog(null)}>
-          <p>版本 1.0.0 · 第一阶段</p>
+          <p>版本 2.0.0 · RSS 与离线翻译链路</p>
           <p>
-            一个为 NBA 与足球爱好者设计的个人新闻阅读 PWA。全部 32
-            篇内容均为原创演示，配图为自产 SVG 插画，不对应真实报道。
+            一个为 NBA 与足球爱好者设计的个人新闻阅读 PWA。新闻由 GitHub Actions
+            检查 RSS，按来源许可控制公开展示和翻译。配图为自产 SVG
+            插画，非新闻现场照片。
           </p>
           <p>
-            本阶段使用本地数据，无后台、账号、广告或新闻
-            API。视频与讨论仅预留入口。
+            不抓取新闻全文，不转载未经许可的摘要或图片。Argos
+            仅在允许时做离线英中翻译；视频与讨论继续预留。
           </p>
           <button className="primary-button" onClick={() => setDialog(null)}>
             继续热爱
@@ -173,7 +178,7 @@ export function Settings() {
             <li>向下找到「添加到主屏幕」，确认添加。</li>
           </ol>
           <p>
-            首次联网打开后，基础界面和演示新闻可离线阅读。离线缓存可能被系统清理，个人数据以本机存储为准。
+            首次联网打开后，基础界面和最近成功获取的新闻可离线阅读。离线缓存可能被系统清理，个人数据以本机存储为准。
           </p>
           <p>其他浏览器可使用地址栏或菜单中的「安装应用」入口（如支持）。</p>
           <button className="primary-button" onClick={() => setDialog(null)}>

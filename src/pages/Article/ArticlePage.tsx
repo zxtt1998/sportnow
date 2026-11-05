@@ -1,3 +1,5 @@
+import { toArticleView } from "../../services/news-validation";
+import { useNews } from "../../hooks/useNews";
 import { useEffect } from "react";
 import {
   ArrowUpRight,
@@ -16,9 +18,13 @@ import { useUser } from "../../stores/UserStore";
 import { absoluteTime, assetUrl, sportLabel } from "../../utils/format";
 
 export function ArticlePage() {
+  const news = useNews();
   const { id = "" } = useParams();
-  const article = newsService.get(id);
   const { data, markRead, toggleBookmark } = useUser();
+  const savedRecord = data.bookmarks.find((b) => b.articleId === id)?.snapshot;
+  const currentArticle = newsService.get(id);
+  const article =
+    currentArticle ?? (savedRecord ? toArticleView(savedRecord) : undefined);
   useEffect(() => {
     if (article) markRead(article.id);
   }, [article, markRead]);
@@ -35,7 +41,7 @@ export function ArticlePage() {
       <div className="reading-container">
         <BackBar title="新闻详情" />
         <EmptyState
-          title="这篇内容暂时不在场"
+          title={news.loading ? "正在加载这篇新闻" : "这篇内容暂时不在场"}
           description="链接可能有误，回首页继续发现体育故事。"
         >
           <Link className="primary-button" to="/">
@@ -66,33 +72,48 @@ export function ArticlePage() {
         title={sportLabel(article.sport)}
         trailing={<BookmarkButton article={article} />}
       />
+      {!currentArticle && savedRecord && (
+        <p className="news-message">
+          此新闻已不在当前索引，正在显示本机收藏快照。请阅读原文了解最新情况。
+        </p>
+      )}
       <article className="article-detail">
         <div className="detail-kicker">
           <span className={`sport-text sport-${article.sport}`}>
             {sportLabel(article.sport)}
           </span>
-          <span className="demo-label">原创演示</span>
-          <span>约 2 分钟阅读</span>
+          <span className="demo-label">
+            {article.isDemo
+              ? "原创演示"
+              : article.record?.titleZh
+                ? "机器翻译"
+                : "英文原标题"}
+          </span>
+          <span>{article.isDemo ? "约 2 分钟阅读" : "原文索引"}</span>
         </div>
         <h1>
           {article.title.split(/(?<=[，：])/u).map((phrase, index) => (
-            <span className="title-phrase" key={index}>{phrase}</span>
+            <span className="title-phrase" key={index}>
+              {phrase}
+            </span>
           ))}
         </h1>
-        <p className="english-title" lang="en">
-          {article.englishTitle}
-        </p>
+        {article.title !== article.englishTitle && (
+          <p className="english-title" lang="en">
+            {article.englishTitle}
+          </p>
+        )}
         <div className="detail-byline">
           <span className="byline-avatar">
             S<span>.</span>
           </span>
           <div>
-            <strong>{source?.name}</strong>
+            <strong>{article.sourceName || source?.name}</strong>
             <p>
               <time dateTime={article.publishedAt}>
                 {absoluteTime(article.publishedAt)}
               </time>
-              <span> · 演示发布时间</span>
+              <span> · {article.isDemo ? "演示发布时间" : "来源发布时间"}</span>
             </p>
           </div>
         </div>
@@ -111,17 +132,30 @@ export function ArticlePage() {
           <div className="editor-note">
             <ShieldCheck size={19} />
             <p>
-              <strong>关于这篇内容</strong>
-              这是一篇为产品体验编写的原创演示，非真实新闻报道。没有对应原文，也没有来自媒体的真实采访。
+              <strong>
+                {article.isDemo ? "关于这篇内容" : "来源与展示范围"}
+              </strong>
+              {article.isDemo
+                ? "这是产品演示，非真实新闻报道。"
+                : article.record?.contentPolicy.reason}
+              <br />
+              {!article.isDemo && "新闻事实以来源原文为准；机器翻译可能有误。"}
             </p>
           </div>
-          <h2>中文摘要</h2>
-          <p className="detail-lead">{article.paragraphs[0]}</p>
-          <p>{article.paragraphs[1]}</p>
-          <blockquote>
-            看见比分之外的细节，让每一份热爱都有自己的视角。
-          </blockquote>
-          <p>{article.paragraphs[2]}</p>
+          {article.summary && (
+            <>
+              <h2>
+                {article.isDemo || article.record?.summaryZh
+                  ? "中文摘要"
+                  : "RSS 原文摘要"}
+              </h2>
+              <p className="detail-lead">{article.summary}</p>
+            </>
+          )}
+          {article.isDemo &&
+            article.paragraphs
+              .slice(1)
+              .map((paragraph, index) => <p key={index}>{paragraph}</p>)}
           <div className="detail-tags">
             {[...article.teamIds, ...article.playerIds].map((id) => (
               <Link to={`/search?entity=${id}`} key={id}>
@@ -141,7 +175,7 @@ export function ArticlePage() {
             <button
               className={`secondary-button ${saved ? "saved" : ""}`}
               aria-pressed={saved}
-              onClick={() => toggleBookmark(article.id)}
+              onClick={() => toggleBookmark(article.id, article.record)}
             >
               <Bookmark size={18} fill={saved ? "currentColor" : "none"} />
               {saved ? "已收藏" : "收藏文章"}

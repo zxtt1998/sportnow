@@ -1,3 +1,4 @@
+import { useNews } from "../../hooks/useNews";
 import { useDeferredValue, useRef } from "react";
 import { Search, X, SlidersHorizontal, ArrowUpRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -8,6 +9,7 @@ import { newsService } from "../../services/news";
 import type { Sport } from "../../types";
 const suggestions = ["马刺", "文班亚马", "皇家马德里", "C罗", "欧冠", "转会"];
 export function SearchPage() {
+  const news = useNews();
   const [params, setParams] = useSearchParams();
   const input = useRef<HTMLInputElement>(null);
   const query = params.get("q") || "";
@@ -38,7 +40,7 @@ export function SearchPage() {
         <h1>
           你关心的，都在这里<span className="accent-text">。</span>
         </h1>
-        <p>搜索本地演示新闻、球队与球员</p>
+        <p>搜索新闻、球队与球员</p>
       </div>
       <form
         role="search"
@@ -124,7 +126,8 @@ export function SearchPage() {
           <p className="search-footnote">
             支持中英文标题、球队全称与球员姓名。
             <br />
-            当前搜索范围为 32 篇原创演示内容。
+            当前搜索范围为 {news.articles.length} 篇
+            {news.mode === "demo" ? "演示内容" : "新闻索引"}。
           </p>
         </div>
       ) : (
@@ -132,7 +135,7 @@ export function SearchPage() {
           <div className="section-title search-results-title">
             <h2>搜索结果</h2>
             <span role="status" aria-live="polite">
-              {results.length} 篇演示内容
+              {results.length} 篇{news.mode === "demo" ? "演示内容" : "新闻"}
             </span>
           </div>
           <div className="news-list" aria-busy={query !== deferred}>

@@ -1,175 +1,166 @@
 # SportNow
 
-为热爱在场。一个面向 iPhone 的个人体育新闻 PWA，使用简体中文，关注 NBA 与欧洲足球。
+面向 iPhone 的 NBA 与足球阅读 PWA。第二阶段在第一阶段 React + TypeScript + Vite 界面上增加 RSS 管线、Argos 离线翻译、真实 JSON 加载、缓存状态和每小时 GitHub Actions 更新。
 
-第一阶段为完整的本地演示前端：**32 篇原创演示内容（NBA 15、足球 15、其他体育 2）**，不接入真实新闻、翻译、视频或评论 API，不需要 API Key、数据库或账号。所有插画、图标与启动图均为本项目原创；没有使用第三方新闻照片或球队官方标识。
+**当前重要边界：三个 RSS 均已实测可访问；用户没有额外转载/翻译授权，已选择保守处理。因此生产环境只显示官方来源入口与检查状态，公开新闻条目与真实新闻翻译均为 0。没有用演示数据填充生产列表。** 完整理由与授权配置见 [来源策略](docs/content-policy.md)。
+
+- [GitHub 仓库](https://github.com/zxtt1998/sportnow)
+- [GitHub Pages](https://zxtt1998.github.io/sportnow/)
+- [Actions 运行记录](https://github.com/zxtt1998/sportnow/actions)
 
 ## 本地运行
 
-需要 Node.js **22.12+**（推荐 Node.js 22 LTS）与 npm。
+Node.js 22.12+，Python 3.12。
 
 ```bash
 npm ci
 npm run dev
 ```
 
-打开终端显示的地址，默认 `http://localhost:5173`。同一局域网下可通过电脑 IP 在 iPhone Safari 查看响应式页面；**PWA Service Worker 需要 HTTPS 或 localhost**，手机通过普通 HTTP 局域网 IP 访问时不能验证安装和离线功能。可在 GitHub Pages 的 HTTPS 地址完成真机安装测试。
+默认 `http://localhost:5173/`。生产模式使用真实数据契约读取 `public/data/news.json` 和 `public/data/sources-status.json`。开发模式访问 `http://localhost:5173/?demo=1` 可以查看明确标识的第一阶段演示；生产构建不接受这个开关，也不会在加载失败时自动替换为演示新闻。
 
 ```bash
-npm run typecheck  # TypeScript 严格检查
-npm test           # 数据检索、排序和持久化数据校验
-npm run build      # 类型检查 + 生产构建 + Manifest/Service Worker
-npm run preview    # 生产构建本地预览，默认 4173
+npm run typecheck
+npm test
+npm run build
+npm run preview
 ```
 
-PWA 仅在生产构建注册，日常 Vite 开发模式不会被旧缓存干扰。
+PWA 仅在生产构建注册。HTTP 局域网 IP 可看界面，但 iPhone 安装和 Service Worker 需 HTTPS；可在 Pages 地址或获准使用的 HTTPS 预览环境验收。
 
-## 功能
+## 抓取、翻译与验证
 
-- 四个底部栏目：首页、NBA、足球、我的；桌面端提供顶部导航与关注侧栏。
-- 首页焦点大卡、关注入口、NBA/足球/综合体育版块；推荐、最新、模拟热门三种栏目。
-- 推荐根据本机关注的球队/球员优先排序；最新按演示发布时间降序；热门为明确标注的模拟分数，非真实阅读量。
-- 手动刷新与触摸下拉刷新只重新载入本地演示，不改变演示发布时间或声称获取新报道。
-- NBA：全部、马刺、交易、伤病、球员；足球：全部、皇马、转会、欧冠、五大联赛；支持最新/关注优先排序。
-- 全局搜索支持中文/英文标题、摘要、球队/球员全称、简称、分类，含清除、空白探索、无结果和分类筛选。
-- 详情提供中文标题、英文标题、来源、演示时间、原创配图、中文摘要、可点击标签、收藏、相关推荐与返回。
-- 没有真实对应文章的演示均为 `originalUrl: null`，原文按钮禁用并说明原因。未来有有效 http(s) 原文 URL 时，按钮会在浏览器新标签打开，带 `noopener noreferrer`。
-- 比赛集锦和球迷讨论为明确的功能预留，无伪造评论、视频和不可见的外部请求。
-- 关注管理包含 9 支球队与 4 名球员，可添加、删除及中英文检索。默认关注马刺、皇马、C罗。
-- 收藏与阅读记录支持筛选、取消收藏、已读标记、清空记录；最多保留最近 100 条阅读记录。
-- 浅色、近黑深色、跟随系统；推荐/最新默认排序；舒适/紧凑密度。
-- 所有个人状态使用版本化 `localStorage`，校验损坏数据、跨标签同步，并提示存储不可用。
-- 清除本地数据有确认弹窗，仅重置 `sportnow:v1` 的内容，恢复默认关注和设置。
-- 固定底栏、iPhone 安全区域、键盘焦点、原生可访问弹窗、减少动态效果偏好、列表滚动记忆。
-
-## 项目目录
-
-```text
-sportnow/
-├── .github/workflows/deploy.yml  # main 分支测试、构建、Pages 发布
-├── public/
-│   ├── icons/                   # PNG 图标、maskable、Apple 图标与竖屏启动图
-│   └── images/                  # 原创篮球/足球/跑道 SVG
-├── src/
-│   ├── components/
-│   │   ├── common/              # 品牌、返回、空状态、Dialog、分段选择
-│   │   ├── layout/              # 应用壳、导航、侧栏、离线和更新提示
-│   │   └── news/                # 统一新闻卡、关注条、体育分类列表
-│   ├── pages/
-│   │   ├── Home/
-│   │   ├── NBA/
-│   │   ├── Football/
-│   │   ├── Article/
-│   │   ├── Profile/             # 收藏、历史、关注、设置
-│   │   └── Search/
-│   ├── data/                    # 演示内容、球队、球员、来源
-│   ├── services/news.ts         # 独立的数据适配与搜索/筛选/排序
-│   ├── hooks/                   # 滚动位置恢复
-│   ├── stores/                  # 用户状态、持久化与运行时数据校验
-│   ├── types/                   # Article / NewsSource / Team / Player /
-│   │                            # Follow / Bookmark / Video / UserPreferences
-│   ├── utils/                   # 资源 URL、时间和分类格式化
-│   ├── App.tsx                  # 路由组合
-│   ├── main.tsx
-│   └── styles.css               # Tailwind 入口、主题 token 与响应式组件样式
-├── tests/
-│   ├── news.test.ts
-│   ├── storage.test.ts
-│   └── e2e/app.spec.ts
-├── index.html
-├── package.json
-├── package-lock.json
-├── playwright.config.ts
-├── tsconfig.json
-└── vite.config.ts
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-news.txt
+python -m unittest discover -s tests/python -v
+python -m scripts.news.pipeline --no-translation --report /tmp/news-run-report.json
+python -m scripts.news.validate
 ```
 
-## GitHub Pages 部署
+所有 Python 依赖（包括传递依赖）锁定在 `requirements-news.txt`、`requirements-translation.txt`；`.in` 文件记录顶层选择。GitHub Ubuntu 使用相同 Python 3.12，并预装锁定的 CPU PyTorch，避免拉取 CUDA 依赖。
 
-源码仓库：[zxtt1998/sportnow](https://github.com/zxtt1998/sportnow)。
+准备模型并独立验证：
 
-手机访问地址：[SportNow 演示站](https://zxtt1998.github.io/sportnow/)。最近构建及发布状态见 [GitHub Actions](https://github.com/zxtt1998/sportnow/actions)。以下步骤也适用于部署到你自己的其他仓库。
+```bash
+pip install -r requirements-translation.txt
+export XDG_DATA_HOME="$PWD/.cache/argos/data"
+export XDG_CACHE_HOME="$PWD/.cache/argos/cache"
+export ARGOS_DEVICE_TYPE=cpu
+export ARGOS_INTER_THREADS=1
+export ARGOS_INTRA_THREADS=2
+python -m scripts.news.prepare_model --strict --report /tmp/argos-model-report.json
+python -m scripts.news.test_argos --report /tmp/argos-smoke-report.json
+python -m scripts.news.pipeline --report /tmp/news-run-report.json
+```
 
-1. 在 GitHub 新建仓库（例如 `sportnow`）；使用免费 Pages 时可选择公共仓库。
-2. 将本项目提交到该仓库的 **main** 分支：
+仅准备 Argos `en → zh` 1.9 模型，固定 SHA-256；另准备固定 Stanza 版本所需的英语分句资源，和模型一起缓存。**推理进程关闭网络连接、禁止 Stanza 在推理时检查/下载资源**。不运行 LibreTranslate HTTP 服务，不调用翻译 API。
 
-   ```bash
-   git init -b main
-   git add .
-   git commit -m "Build SportNow phase one PWA"
-   git remote add origin https://github.com/YOUR_NAME/sportnow.git
-   git push -u origin main
-   ```
+翻译标题和摘要分别处理，只有对应许可字段允许时才运行。用最长、词边界匹配保护球队/球员/赛事实体，再按占位符恢复规范译名；占位符损坏、数字改变、异常扩写、缺少中文或超时都回退英文。该校验减少错误，不保证机器翻译绝对准确，详情页保留原文入口与机器翻译说明。
 
-   如果已有 Git 仓库，直接添加对应 remote、提交和推送，不需要重复初始化。
+默认每次最多处理 12 篇待翻译新闻，单字段最多 25 秒、1,600 字符，总预算 300 秒。原文、字段、库/模型版本和实际术语词典哈希共同生成缓存键；已有合格中文结果直接复用。模型准备失败不会阻止 RSS 检查和既有数据发布。
 
-3. 打开仓库 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。
-4. 如果首次 push 在设置 Pages 之前执行，可在 **Actions → Build and deploy SportNow → Run workflow** 手动运行一次。
-5. Workflow 自动执行 `npm ci`、`npm test`、`npm run build`，构建成功才上传并发布 `dist/`。
-6. 发布地址通常为 `https://YOUR_NAME.github.io/sportnow/`，部署任务与 Pages 设置中会显示实际地址。
+## 数据流程与边界
 
-Workflow 使用 `actions/configure-pages` 返回的 `base_path` 设置 `VITE_BASE_PATH`。仓库子路径、自定义域名和用户根站点均可使用；资源路径、Manifest `id/start_url/scope`、Service Worker 注册和缓存导航都跟随该路径。
+1. 配置源 → HTTPS 请求，标识 User-Agent，连接/读取超时 8/20 秒，最多 3 次；401/403/404 不重试或绕过。
+2. 仅解析 RSS 2.0 / Atom / RSS 1.0 条目，不解析或请求文章全文；XML 外部实体被禁用，响应最多 5 MiB。
+3. 先检查来源是否允许发布。未允许时不持久保存条目标题、摘要或原文 URL，仅输出来源级检查结果。
+4. 允许时验证日期和出版商 URL 白名单，剥离跟踪参数，以规范化 URL 生成稳定 ID。
+5. URL 优先去重，再对同分类、48 小时内、数字一致的高相似标题去重；合并分类标签。
+6. 用独立词典识别球队、球员、赛事；分类以配置源为基础，避免把足球 Spurs 误识别为 NBA 马刺。
+7. 按许可分别翻译新内容或此前未成功内容，复用 JSON 中的中文和翻译结果缓存。
+8. 合并历史，正常情况下保留 30 天、最多 1,000 条。一个源失败不会清空其他源或历史；所有源均失败时保留最近成功快照，可能超过 30 天但明确显示为旧缓存。
+9. 校验完整结构和许可约束、稳定排序、原子写入 `news.json` / `sources-status.json`。不因无变化的检查更新文件时间戳。
 
-独立模拟子路径构建：
+`news.json` 的 `generatedAt` 表示内容版本生成时间，`revision` 是条目数组的 SHA-256；状态文件携带同一版本。内容不变则 `news.json` 字节不变；状态只在来源内容指纹/HTTP 验证头、错误恢复、数量或策略等发生变化时更新。未变化的每小时检查结果保留在 Actions 日志/执行报告，而不制造无意义提交。
+
+规范 Article 类型见 `src/types/index.ts`；公开 JSON Schema 见 `config/news.schema.json`。`ArticleView` 是保留第一阶段组件字段的视图适配器，避免重写页面。
+
+## 前端与本机数据
+
+原有首页、NBA、足球、详情、搜索、收藏、关注、历史、浅色/深色/跟随系统和密度设置保留。
+
+- 应用打开、回到前台（间隔至少 1 分钟）及网络恢复时检查 JSON；下拉/按钮刷新检查已发布数据，不声称在浏览器里抓取 RSS。
+- 推荐按关注球队/球员优先、发布时间优先；相同 `eventKey` 的条目降权。真实数据“精选”不伪造阅读量或热度分数。
+- 翻译不可用时显示英文标题；摘要为空不渲染摘要段落；原文使用来源的有效 HTTPS URL。
+- `sportnow:v1` 的设置/收藏/历史格式保持向后兼容。真实新闻收藏增加经校验的本机快照，条目退出 30 天索引后仍可从收藏回看并打开原文。第一阶段演示 ID 不会被替换成真实新闻 ID。
+- `sportnow:news:v2` 存储最近成功的新闻与配套状态，仅用于离线回退；坏 JSON、演示数据、未授权字段或旧 CDN 版本不能替换已验证的新快照。
+- 清除本机数据会恢复默认关注，并清理该新闻缓存键；不清除其他站点的存储。
+
+设置页“新闻更新状态”显示总数、分类数量、最近内容更新、来源分别成功/失败、错误与许可原因，以及当前是否缓存数据。当前许可尚未确认时，来源入口与技术成功状态仍分别展示。
+
+## Service Worker
+
+`src/sw.ts` 使用 Workbox injectManifest：
+
+- 预缓存应用壳、图标、原创插画和启动图；JSON 不进入构建预缓存。
+- 两个数据 JSON 使用 NetworkFirst，4 秒后允许使用最近成功缓存，恢复网络后重新检查；最多缓存两个数据响应。
+- 回退响应加 `X-SportNow-Cache: offline`，前端显示缓存与可能过期提示。
+- JSON 写入缓存前检查格式；页面仍有独立的本机快照回退。新闻与状态版本不匹配时，不显示错误版本的统计。
+- 新应用版本保持确认更新提示，激活后清理旧静态缓存与第一阶段旧新闻缓存。
+
+## GitHub Actions 与 Pages
+
+- `argos-smoke.yml`：手动、独立的 Ubuntu CPU 模型与自有文本验证；已在正式更新前运行。
+- `update-news.yml`：`17 * * * *`，并支持手动执行；抓取、策略检查、合并、翻译、校验、有变化才提交，然后直接调用发布工作流。
+- `deploy.yml`：main 推送或手动部署，调用同一发布流程。
+- `publish.yml`：可复用的 JSON/单元测试、前端构建、Pages 发布；始终检出最新 main。
+- `.github/actions/argos-setup`：锁定 CPU 依赖、恢复模型缓存和准备英语分句资源；模型/库/配置改变会使缓存失效。
+
+两个发布入口共用 `sportnow-pages-main` 并发组，正在发布的任务不被取消。更新提交前检查远程 main 未变化，拒绝覆盖更新的提交；发布前再次检查构建 SHA 与 main 一致。数据由 GITHUB_TOKEN 提交后，不依赖触发 push 工作流，更新流程自己完成部署。
+
+权限按 job 分配：仅更新 job 有 contents:write；构建只读；部署仅获得 Pages 写入和 OIDC 权限。没有 PAT/API Key/仓库密钥配置。
+
+需在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**，并允许 Actions 运行。若仓库组织策略禁止 GITHUB_TOKEN 写 main 或 Pages/OIDC，需要在组织允许的范围调整规则；不要为此写入个人密钥。当前 `zxtt1998/sportnow` 已启用 Pages。
+
+计划任务可能延迟；公共仓库长时间不活跃也可能被 GitHub 暂停计划任务。需要时用 Actions → Update RSS and publish SportNow → Run workflow 手动执行。站点网络可达性与构建成功是不同检查。
+
+### 子路径
+
+`actions/configure-pages` 的 base_path 自动设置 Vite base、Manifest scope、SW scope 和资源地址；HashRouter 支持详情刷新。
 
 ```bash
 VITE_BASE_PATH=/sportnow/ npm run build
 VITE_BASE_PATH=/sportnow/ npm run preview
-# 打开 http://localhost:4173/sportnow/
+# http://localhost:4173/sportnow/
 ```
 
-使用 React Router **HashRouter**，例如 `/sportnow/#/article/nba-01`。浏览器刷新只向 GitHub Pages 请求 `/sportnow/`，不需要服务器重写或 404 跳转技巧。
-
-GitHub 免费托管和具体仓库权限以 GitHub 当前账户设置为准。部署流程参见 [Vite 官方 Pages 指南](https://vite.dev/guide/static-deploy.html#github-pages)，路由选择参见 [React Router HashRouter 文档](https://reactrouter.com/api/declarative-routers/HashRouter)。
-
-## PWA 与离线策略
-
-- `vite-plugin-pwa` 在构建时生成 Manifest、`sw.js` 与 Workbox 缓存清单。
-- 包含 192/512 PNG 图标、专用安全区 maskable 图标、180px Apple Touch 图标，以及常见 375/390/393/430pt iPhone 竖屏启动图。其他设备使用系统启动行为；横屏不提供专用启动图。
-- 首次联网打开并等待 Service Worker 完成安装后，应用壳、全部演示内容及插画可离线使用。
-- 当前演示数据被编译进带哈希的 JS，只随应用版本更新，不作为“实时新闻”展示；日期固定以 **2026-11-05 16:00（北京时间）** 为演示时钟。
-- 新版本安装完成会显示“新版本已就绪”，用户轻点“更新”后切换 Worker 并刷新；回到前台也检查更新，清理过期构建缓存。参见 [PWA 更新文档](https://vite-pwa-org.netlify.app/guide/prompt-for-update.html)。
-- 为第二阶段 `data/news.json` 预设 **NetworkFirst**：4 秒网络超时、最多 1 份缓存、离线回退最多 1 小时；JSON 不加入静态 precache。未来接入时须同时展示来源抓取时间、离线状态和内容有效期，不把缓存内容伪装成新消息。
-- 在线状态只作提示，不限制阅读；同时通过本站 Manifest 的无缓存 HEAD 请求辅助判断连接。[MDN 说明 `navigator.onLine` 不能可靠代表互联网可用性](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine)。
-- iPhone 安装：Safari 打开 HTTPS 站点 → 分享 → 添加到主屏幕。应用内设置也提供步骤。
-- 浏览器可能清理站点缓存或本机存储；第一阶段没有跨设备同步和云备份。
-
-## 测试
+## 浏览器验收
 
 ```bash
-npm ci
-npm run typecheck
-npm test
 npm run build
 npx playwright install chromium webkit
 npm run test:e2e
 ```
 
-端到端测试会自动启动 4173 端口的生产预览，需要先构建。覆盖手机/桌面浏览器的搜索→详情→收藏→返回→刷新持久化、关注、主题与密度、历史清除、筛选、模拟刷新、320px 各页面布局、真实导航、滚动恢复、Manifest、Service Worker 和离线阅读。
+测试使用只监听 127.0.0.1 的临时静态服务器，并按浏览器会话提供自有测试 JSON，不会部署测试接口或内容。覆盖真实数据契约加载、英文/空摘要回退、原文 URL、收藏与快照、关注/主题/历史、320px、离线缓存和网络恢复。需要 Node.js 能从终端 PATH 直接访问。
 
-若系统已安装兼容 Chromium，可通过 `PLAYWRIGHT_CHROMIUM_EXECUTABLE` 指定路径；也可通过 `E2E_BASE_URL` 指定已运行的预览服务器。测试结果与 trace 默认写入 `/tmp/sportnow-test-results`，不进入源码。Browser 插件当前不可用，因此采用 Playwright；后续可安装 Browser 插件便于在应用内持续做视觉检查。
+没有 Browser 插件，因此用 Playwright；可通过 `PLAYWRIGHT_CHROMIUM_EXECUTABLE` 指定已有兼容 Chromium。后续可安装 Browser 插件方便应用内视觉复查。测试产物在 `/tmp/sportnow-test-results`，不提交截图或临时调试文件。
 
-自动部署会运行数据单元测试和包含 TypeScript 的生产构建。完整浏览器测试为本地验收步骤，不会增加定时任务。
+## 主要新增/修改目录
 
-### 本次验收记录
+```text
+config/                         来源策略、独立术语词典、模型配置、JSON Schema
+scripts/news/                   RSS/Atom 请求解析、URL/日期、实体识别、去重、翻译、校验
+requirements-*.txt               锁定 Python 依赖
+public/data/                    news.json、sources-status.json
+src/services/news-store.ts      真实 JSON 与最后成功快照
+src/services/news-validation.ts 前端数据/许可校验和视图适配
+src/hooks/useNews*.ts            数据订阅、打开/前台/联网检查
+src/components/news/NewsStatus.tsx 来源入口、状态与许可说明
+src/sw.ts                       独立 JSON 网络优先缓存
+src/stores/                     向后兼容设置，新增收藏快照
+.github/workflows/              独立 Argos、每小时更新、共享发布
+.github/actions/argos-setup/     模型和 Python 缓存准备
+ tests/python/                  RSS、去重、分类、权限、失败回退、JSON 测试
+ tests/news-loading.test.ts      真实契约、路径、缓存、旧版本与授权字段测试
+ tests/e2e/                     浏览器回归与仅本地运行的测试服务器
+```
 
-- TypeScript 严格检查：通过。
-- 生产构建：通过；完整离线预缓存小于 1 MB（含多尺寸启动图）。
-- 数据/持久化单元测试：10 项通过。
-- 端到端覆盖 Chromium 手机/桌面与 WebKit 手机，共 18 项场景全部通过。
-- 独立模拟 `/sportnow-test/` 子路径：详情刷新、图标、Manifest 路径、Worker scope 与离线详情通过。
-- 临时服务器模拟 v1 → v2 发布：更新提示、确认后刷新、收藏保留与旧 HTML 缓存清理通过。
-- 已人工查看手机/桌面的浅色与深色截图；没有明显横向溢出。
-- 尚未使用真实 iPhone 完成 Safari“添加到主屏幕”安装、系统启动图和 Home Indicator 真机验收，GitHub Pages 的发布结果以 Actions 为准。
+## 后续需要解决的事项
 
-## 第一阶段边界与下一阶段
-
-当前没有真实 RSS/API、自动抓取、翻译、实时比分/技术统计、登录、数据库、自建评论、视频下载或视频存储；没有 Cloudflare、Supabase、Firebase 或付费后台。
-
-第二阶段建议顺序：
-
-1. 先确定合法的新闻源与摘要使用范围，保留原始标题、真实文章 URL、来源和抓取时间；不能抓取/转载未经允许的正文或图片。
-2. 在 GitHub Actions 生成有版本和时间戳的 `public/data/news.json`；在 `src/services/news.ts` 增加加载、结构校验和失败回退，保留 `list/get` 查询接口与现有组件类型。第一阶段未设置任何定时新闻任务。
-3. 增加明确的加载、抓取失败与过期提示，再评估中文摘要/翻译方案；避免把失败或旧数据当成更新成功。
-4. 为文章关联经核验的官方视频和公开讨论 URL，外部打开；继续保留个人使用、本地收藏的轻量架构。
-5. 在实际 iPhone Safari 和主屏幕模式验收更新、键盘、返回与离线，随后再考虑收藏导入导出和更精细的关注偏好。
+1. 取得能够公开保存/展示/翻译的来源许可，或选择明确允许这些用途的新来源；在此之前保持 0 条公开新闻，不用标题扩写摘要。
+2. 在真实 iPhone Safari 与主屏幕模式验收登录无关的阅读、缓存更新和安装；Playwright WebKit 不能替代真机。
+3. 机器翻译仍可能不自然或出错，必须保留原文对照；当前不做人工校对、AI 推荐、实时比分、自建评论、视频下载或云同步。
+4. 启用合法来源后观察 30 天归档大小、模型冷启动、每次翻译预算及 GitHub 定时延迟，再按实际情况调整。

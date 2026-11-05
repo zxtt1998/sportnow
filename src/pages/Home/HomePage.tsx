@@ -1,3 +1,5 @@
+import { NewsAvailability, NewsNotice } from "../../components/news/NewsStatus";
+import { useNews } from "../../hooks/useNews";
 import { useRef, useState } from "react";
 import type { TouchEvent } from "react";
 import { ArrowDown, ArrowRight, Flame, RefreshCw } from "lucide-react";
@@ -10,6 +12,7 @@ import { useUser } from "../../stores/UserStore";
 import type { FeedSort, Sport } from "../../types";
 
 export function HomePage() {
+  const news = useNews();
   const { data, setPreferences } = useUser();
   const [params, setParams] = useSearchParams();
   const requested = params.get("feed");
@@ -21,8 +24,11 @@ export function HomePage() {
   const [refreshed, setRefreshed] = useState(false);
   const [pull, setPull] = useState(0);
   const start = useRef<number | null>(null);
-  const list = newsService.list({ sort, follows: data.follows });
-  const hero = list.find((a) => a.image)!;
+  const list = newsService.list({
+    sort: sort === "hot" && news.mode !== "demo" ? "recommended" : sort,
+    follows: data.follows,
+  });
+  const hero = list.find((a) => a.image) ?? list[0];
   const changeFeed = (value: FeedSort) => {
     setParams({ feed: value }, { replace: true });
     if (value !== "hot") setPreferences({ sort: value });
@@ -75,7 +81,7 @@ export function HomePage() {
       </div>
       <div className="news-list">
         {list
-          .filter((a) => a.sport === sport && a.id !== hero.id)
+          .filter((a) => a.sport === sport && a.id !== hero?.id)
           .slice(0, limit)
           .map((article) => (
             <ArticleCard
@@ -106,18 +112,24 @@ export function HomePage() {
         <RefreshCw size={17} className={refreshing ? "spinning" : ""} />
         <span>
           {refreshing
-            ? "正在重新载入本地演示数据"
+            ? news.mode === "demo"
+              ? "正在重新载入本地演示数据"
+              : "正在检查站点新闻数据"
             : pull > 55
-              ? "松开刷新本地演示"
-              : "下拉刷新本地演示"}
+              ? "松开检查新闻更新"
+              : "下拉检查新闻更新"}
         </span>
       </div>
       <div className="page-heading">
         <div>
           <div className="date-line">
-            11 月 5 日 · 星期四
+            {new Intl.DateTimeFormat("zh-CN", {
+              month: "long",
+              day: "numeric",
+              weekday: "long",
+            }).format(new Date())}
             <span className="tiny-dot" />
-            演示刊
+            {news.mode === "demo" ? "演示刊" : "体育阅读"}
           </div>
           <h1>
             为热爱<span className="accent-text">，</span>在场
@@ -139,7 +151,10 @@ export function HomePage() {
                 [
                   { value: "recommended", label: "推荐" },
                   { value: "latest", label: "最新" },
-                  { value: "hot", label: "热门" },
+                  {
+                    value: "hot",
+                    label: news.mode === "demo" ? "热门" : "精选",
+                  },
                 ] as const
               ).map((tab) => (
                 <button
@@ -156,29 +171,33 @@ export function HomePage() {
               className="refresh-button"
               onClick={() => void refresh()}
               disabled={refreshing}
-              aria-label="刷新本地演示数据"
+              aria-label="检查新闻更新"
             >
               <RefreshCw size={14} className={refreshing ? "spinning" : ""} />
               <span>刷新</span>
             </button>
           </div>
-          <div className="demo-notice">
-            <span className="demo-notice-dot" />
-            <span>
-              {sort === "hot"
-                ? "热度为模拟分数，不代表真实阅读量"
-                : "本地演示内容 · 非真实新闻报道"}
-            </span>
-            <span className="demo-edition">VOL. 001</span>
-          </div>
+          <NewsNotice />
           <div role="status" className="refresh-status">
-            {refreshed && "已重新载入本地演示数据，没有获取网络新闻。"}
+            {refreshed &&
+              (news.mode === "demo"
+                ? "已重新载入本地演示数据，没有获取网络新闻。"
+                : news.error ||
+                  (news.cached
+                    ? "当前使用缓存新闻，网络恢复后会再次检查。"
+                    : "已检查站点新闻数据；来源抓取由 GitHub Actions 执行。"))}
           </div>
-          <ArticleCard article={hero} variant="feature" />
-          <div className="feature-caption">
-            <span>THE SPOTLIGHT</span>
-            <span>原创插画 · 非现场照片</span>
-          </div>
+          {hero ? (
+            <>
+              <ArticleCard article={hero} variant="feature" />
+              <div className="feature-caption">
+                <span>THE SPOTLIGHT</span>
+                <span>原创主题插画 · 非新闻现场照片</span>
+              </div>
+            </>
+          ) : (
+            <NewsAvailability />
+          )}
           <div className="mobile-follows">
             <FollowStrip />
           </div>
@@ -186,7 +205,8 @@ export function HomePage() {
             <>
               {section("nba", "篮下之间", "NBA")}
               {section("football", "绿茵视角", "FOOTBALL")}
-              {section("other", "赛场之外", "MORE SPORTS", 2)}
+              {list.some((a) => a.sport === "other") &&
+                section("other", "赛场之外", "MORE SPORTS", 2)}
             </>
           ) : (
             <section className="news-section">
@@ -195,14 +215,16 @@ export function HomePage() {
                   <span className="section-marker" />
                   {sort === "hot" ? "热门精选" : "最新动态"}
                   <span className="section-english">
-                    {sort === "hot" ? "DEMO PICKS" : "THE LATEST"}
+                    {sort === "hot" ? "EDITOR PICKS" : "THE LATEST"}
                   </span>
                 </h2>
-                <span className="section-count">{list.length - 1} 篇</span>
+                <span className="section-count">
+                  {Math.max(0, list.length - (hero ? 1 : 0))} 篇
+                </span>
               </div>
               <div className="news-list">
                 {list
-                  .filter((a) => a.id !== hero.id)
+                  .filter((a) => a.id !== hero?.id)
                   .map((article) => (
                     <ArticleCard
                       key={article.id}
@@ -221,7 +243,11 @@ export function HomePage() {
           <p className="end-copy">
             暂时读到这里，热爱仍在继续。
             <br />
-            <small>以上时间均相对于演示刊时间显示</small>
+            <small>
+              {news.mode === "demo"
+                ? "演示数据 · 非真实报道"
+                : "发布时间来自来源；中文不可用时保留英文"}
+            </small>
           </p>
         </div>
         <Aside />

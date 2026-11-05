@@ -1,8 +1,10 @@
-import { newsService } from "../services/news";
-export function relativeTime(iso: string) {
+export function relativeTime(iso: string, reference?: string) {
   const hours = Math.max(
     0,
-    Math.floor((Date.parse(newsService.demoNow) - Date.parse(iso)) / 3600000),
+    Math.floor(
+      ((reference ? Date.parse(reference) : Date.now()) - Date.parse(iso)) /
+        3600000,
+    ),
   );
   return hours < 1
     ? "刚刚"

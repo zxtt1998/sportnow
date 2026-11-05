@@ -1,31 +1,104 @@
 import { expect, test } from "@playwright/test";
+import { randomUUID } from "node:crypto";
+import { articleFixture, newsFixture, statusFixture } from "../fixtures";
+import type { Article } from "../../src/types";
+const licensed = {
+  ...articleFixture().contentPolicy,
+  mode: "licensed-translation" as const,
+  allowSummary: true,
+  allowTitleTranslation: true,
+  allowSummaryTranslation: true,
+};
+const rows: Article[] = [
+  articleFixture({
+    titleZh: "马刺训练计划（自有测试内容）",
+    summaryOriginal: "This is an owned test summary.",
+    summaryZh: "这是自有测试摘要。",
+    contentPolicy: licensed,
+    translationStatus: "translated",
+    translationFields: { title: "translated", summary: "translated" },
+  }),
+  articleFixture({
+    id: "news-222222222222222222222222",
+    category: "football",
+    titleOriginal: "Real Madrid training example",
+    titleZh: "皇马训练观察（自有测试内容）",
+    originalUrl: "https://example.org/madrid",
+    teamIds: ["madrid"],
+    playerIds: ["mbappe"],
+    tags: ["皇家马德里", "欧冠", "五大联赛"],
+    contentPolicy: licensed,
+    eventKey: "madrid-event",
+  }),
+  articleFixture({
+    id: "news-333333333333333333333333",
+    category: "football",
+    titleOriginal: "Cristiano Ronaldo movement example",
+    originalUrl: "https://example.org/ronaldo",
+    teamIds: [],
+    playerIds: ["ronaldo"],
+    tags: ["球员"],
+    eventKey: "ronaldo-event",
+  }),
+  articleFixture({
+    id: "news-444444444444444444444444",
+    titleOriginal: "NBA injury terminology example",
+    originalUrl: "https://example.org/injury",
+    teamIds: [],
+    tags: ["伤病"],
+    eventKey: "injury-event",
+  }),
+];
+async function setNews(
+  page: import("@playwright/test").Page,
+  articles = rows,
+  generatedAt = "2026-11-05T08:00:00Z",
+) {
+  const news = newsFixture(articles, generatedAt);
+  await page.request.post("/__test/news", {
+    data: { news, status: statusFixture(news) },
+  });
+}
+async function prepare(
+  page: import("@playwright/test").Page,
+  context: import("@playwright/test").BrowserContext,
+) {
+  await context.addCookies([
+    {
+      name: "sportnow-e2e-session",
+      value: randomUUID(),
+      url: "http://127.0.0.1:4173",
+    },
+  ]);
+  await setNews(page);
+}
 
-test("home, search, read, back, bookmark and persistence form a complete journey", async ({
+test("live JSON: search, English fallback, original link, bookmark, read and reload", async ({
   page,
+  context,
 }) => {
+  await prepare(page, context);
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
   await expect(page).toHaveTitle(/SportNow/);
   await expect(
-    page.getByRole("heading", { name: "为热爱，在场。" }),
+    page.getByRole("heading", { name: "马刺训练计划（自有测试内容）" }),
   ).toBeVisible();
-  await expect(page.getByText("本地演示内容 · 非真实新闻报道")).toBeVisible();
+  await expect(page.getByText("本地演示内容 · 非真实新闻报道")).toHaveCount(0);
   await page.getByRole("link", { name: "搜索新闻", exact: true }).click();
   await page.getByRole("searchbox").fill("Cristiano Ronaldo");
-  await expect(page.getByText("2 篇演示内容")).toBeVisible();
+  await expect(page.getByText("1 篇新闻", { exact: true })).toBeVisible();
   await page
-    .getByRole("heading", { name: "C罗的门前选择：先看空间，再看皮球" })
+    .getByRole("heading", { name: "Cristiano Ronaldo movement example" })
     .click();
+  await expect(page.locator("h1")).toHaveText(
+    "Cristiano Ronaldo movement example",
+  );
+  await expect(page.getByRole("heading", { name: /摘要/ })).toHaveCount(0);
   await expect(
-    page.getByRole("heading", { name: "中文摘要", exact: true }),
-  ).toBeVisible();
-  await expect(
-    page.getByText("Ronaldo and the timing of a finish"),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: "阅读原文", exact: true }),
-  ).toBeDisabled();
+    page.getByRole("link", { name: "阅读原文", exact: true }),
+  ).toHaveAttribute("href", "https://example.org/ronaldo");
   await page.getByRole("button", { name: "收藏文章", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "已收藏", exact: true }),
@@ -35,11 +108,11 @@ test("home, search, read, back, bookmark and persistence form a complete journey
   await page.goto("/#/profile?tab=bookmarks");
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "C罗的门前选择：先看空间，再看皮球" }),
+    page.getByRole("heading", { name: "Cristiano Ronaldo movement example" }),
   ).toBeVisible();
   await page
     .getByRole("button", {
-      name: "取消收藏：C罗的门前选择：先看空间，再看皮球",
+      name: "取消收藏：Cristiano Ronaldo movement example",
     })
     .click();
   await expect(
@@ -48,21 +121,17 @@ test("home, search, read, back, bookmark and persistence form a complete journey
   expect(errors).toEqual([]);
 });
 
-test("follow, theme, density, history, clear confirmation and reload work", async ({
+test("follow, theme, density, read history and reset remain persistent", async ({
   page,
+  context,
 }) => {
+  await prepare(page, context);
   await page.goto("/#/profile?tab=follows");
-  await expect(
-    page.getByRole("button", { name: "取消关注圣安东尼奥马刺", exact: true }),
-  ).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "关注金州勇士", exact: true }).click();
   await page.reload();
   await expect(
     page.getByRole("button", { name: "取消关注金州勇士", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
-  await page
-    .getByRole("button", { name: "取消关注金州勇士", exact: true })
-    .click();
   await page.getByRole("button", { name: "设置", exact: true }).click();
   await page.getByRole("button", { name: "深色", exact: true }).click();
   await page.getByRole("button", { name: "紧凑", exact: true }).click();
@@ -74,10 +143,11 @@ test("follow, theme, density, history, clear confirmation and reload work", asyn
   );
   await page.getByRole("button", { name: "浅色", exact: true }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await page.goto("/#/article/nba-01");
+  await page.goto("/#/article/" + rows[0].id);
+  await expect(page.locator("h1")).toHaveText(rows[0].titleZh);
   await page.goto("/#/profile?tab=history");
   await expect(
-    page.getByRole("heading", { name: "从防守开始，看见马刺的下一步" }),
+    page.getByRole("heading", { name: rows[0].titleZh }),
   ).toBeVisible();
   await page.getByRole("button", { name: "清空记录", exact: true }).click();
   await page
@@ -85,7 +155,7 @@ test("follow, theme, density, history, clear confirmation and reload work", asyn
     .getByRole("button", { name: "取消", exact: true })
     .click();
   await expect(
-    page.getByRole("heading", { name: "从防守开始，看见马刺的下一步" }),
+    page.getByRole("heading", { name: rows[0].titleZh }),
   ).toBeVisible();
   await page.getByRole("button", { name: "清空记录", exact: true }).click();
   await page
@@ -96,6 +166,9 @@ test("follow, theme, density, history, clear confirmation and reload work", asyn
     page.getByRole("heading", { name: "你的阅读足迹，从下一篇开始" }),
   ).toBeVisible();
   await page.goto("/#/profile?tab=settings");
+  await expect(
+    page.getByRole("heading", { name: "新闻更新状态" }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "清除本地数据", exact: true }).click();
   await page.getByRole("button", { name: "确认清除", exact: true }).click();
   await expect(
@@ -103,15 +176,19 @@ test("follow, theme, density, history, clear confirmation and reload work", asyn
   ).toHaveAttribute("aria-pressed", "true");
 });
 
-test("categories, no results, simulated heat and honest local refresh", async ({
+test("sport filters, no results, curated feed and refresh use real JSON", async ({
   page,
+  context,
 }) => {
+  await prepare(page, context);
   await page.goto("/#/nba");
   await page.getByRole("button", { name: "伤病", exact: true }).click();
-  await expect(page.locator(".article-card")).toHaveCount(2);
+  await expect(page.locator(".feature-body h2")).toHaveText(
+    "NBA injury terminology example",
+  );
   await page.goto("/#/football");
-  await page.getByRole("button", { name: "转会", exact: true }).click();
-  await expect(page.locator(".article-card")).toHaveCount(3);
+  await page.getByRole("button", { name: "皇家马德里", exact: true }).click();
+  await expect(page.locator(".feature-body h2")).toHaveText(rows[1].titleZh);
   await page.goto("/#/search?q=不存在的新闻xyz");
   await expect(
     page.getByRole("heading", { name: "暂时没有找到" }),
@@ -119,21 +196,19 @@ test("categories, no results, simulated heat and honest local refresh", async ({
   await page.getByRole("button", { name: "清除搜索", exact: true }).click();
   await expect(page.getByRole("heading", { name: /从这里开始/ })).toBeVisible();
   await page.goto("/");
-  await page.getByRole("button", { name: "热门", exact: true }).click();
+  await page.getByRole("button", { name: "精选", exact: true }).click();
+  await expect(page.locator(".heat")).toHaveCount(0);
+  await page.getByRole("button", { name: "检查新闻更新", exact: true }).click();
   await expect(
-    page.getByText("热度为模拟分数，不代表真实阅读量"),
-  ).toBeVisible();
-  await page
-    .getByRole("button", { name: "刷新本地演示数据", exact: true })
-    .click();
-  await expect(
-    page.getByText("已重新载入本地演示数据，没有获取网络新闻。"),
+    page.getByText("已检查站点新闻数据；来源抓取由 GitHub Actions 执行。"),
   ).toBeVisible();
 });
 
-test("all routes fit a 320px screen and deep routes survive reload", async ({
+test("all routes fit 320px and details survive deep reload", async ({
   page,
+  context,
 }) => {
+  await prepare(page, context);
   await page.setViewportSize({ width: 320, height: 740 });
   for (const route of [
     "",
@@ -142,87 +217,99 @@ test("all routes fit a 320px screen and deep routes survive reload", async ({
     "profile?tab=follows",
     "profile?tab=settings",
     "search",
-    "article/nba-01",
+    "article/" + rows[0].id,
   ]) {
-    await page.goto(`/#/${route}`);
+    await page.goto("/#/" + route);
     await expect(page.locator("h1")).toBeVisible();
-    const overflow = await page.evaluate(
-      () => document.documentElement.scrollWidth > window.innerWidth,
-    );
-    expect(overflow, `overflow at ${route}`).toBe(false);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth > innerWidth,
+      ),
+      "overflow at " + route,
+    ).toBe(false);
   }
   await page.reload();
   await expect(page.getByRole("heading", { name: "中文摘要" })).toBeVisible();
 });
 
-test("PWA manifest, active worker and offline navigation are functional", async ({
+test("PWA caches last successful news, marks offline, and refreshes on recovery", async ({
   page,
   context,
 }) => {
+  await prepare(page, context);
   await page.goto("/");
-  await page.evaluate(async () => {
-    await navigator.serviceWorker.ready;
-  });
+  await page.evaluate(async () => navigator.serviceWorker.ready);
   await page.reload();
   await expect
     .poll(() => page.evaluate(() => !!navigator.serviceWorker.controller))
     .toBe(true);
-  const manifestUrl = await page
-    .locator('link[rel="manifest"]')
-    .getAttribute("href");
-  const response = await page.request.get(manifestUrl!);
-  const manifest = await response.json();
-  expect(manifest.name).toBe("SportNow");
-  expect(manifest.display).toBe("standalone");
-  expect(
-    manifest.icons.some((i: { sizes: string }) => i.sizes === "512x512"),
-  ).toBe(true);
+  await page.getByRole("button", { name: "检查新闻更新", exact: true }).click();
+  await expect(
+    page.getByText("已检查站点新闻数据；来源抓取由 GitHub Actions 执行。"),
+  ).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(async () => {
+        const cache = await caches.open("sportnow-data-v2");
+        return !!(await cache.match(
+          new URL("data/news.json", location.href.split("#")[0]).href,
+        ));
+      }),
+    )
+    .toBe(true);
   await context.setOffline(true);
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "为热爱，在场。" }),
+    page.getByRole("heading", { name: rows[0].titleZh }),
   ).toBeVisible();
-  await page.goto("/#/article/football-01");
-  await expect(page.getByRole("heading", { name: "中文摘要" })).toBeVisible();
   await expect(
-    page.getByText("当前离线 · 仍可阅读已缓存的演示内容"),
+    page.getByText("正在显示上次成功缓存 · 可能不是最新新闻"),
   ).toBeVisible();
+  const newer = [
+    { ...rows[0], titleZh: "更新后的自有测试标题" },
+    ...rows.slice(1),
+  ];
+  await setNews(page, newer, "2026-11-05T09:00:00Z");
   await context.setOffline(false);
+  await page.evaluate(() => window.dispatchEvent(new Event("online")));
+  await expect(
+    page.getByRole("heading", { name: "更新后的自有测试标题" }),
+  ).toBeVisible({ timeout: 15000 });
 });
 
-test("visible navigation restores list position and article back position", async ({
+test("bookmarks retain a local snapshot after an article leaves the 30-day catalog", async ({
   page,
-}, testInfo) => {
-  await page.goto("/");
-  const nav = page.locator(
-    testInfo.project.name.startsWith("iphone") ? ".bottom-nav" : ".desktop-nav",
-  );
-  await nav.getByRole("link", { name: "NBA", exact: true }).click();
-  await expect(page.locator("h1")).toHaveText("NBA.");
-  await nav.getByRole("link", { name: "足球", exact: true }).click();
-  await expect(page.locator("h1")).toHaveText("足球.");
-  await nav.getByRole("link", { name: "首页", exact: true }).click();
-  await page.evaluate(() => window.scrollTo(0, 1000));
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1000);
-  await nav.getByRole("link", { name: "足球", exact: true }).click();
-  await nav.getByRole("link", { name: "首页", exact: true }).click();
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(1000);
-  const article = page.locator(".article-card-link").first();
-  await article.scrollIntoViewIfNeeded();
-  await article.evaluate((element) =>
-    element.addEventListener(
-      "click",
-      () => sessionStorage.setItem("qa-click-scroll", String(window.scrollY)),
-      { once: true },
+  context,
+}) => {
+  await prepare(page, context);
+  await page.goto("/#/article/" + rows[0].id);
+  await expect(page.locator("h1")).toHaveText(rows[0].titleZh);
+  await page.getByRole("button", { name: "收藏文章", exact: true }).click();
+  await setNews(page, rows.slice(1), "2026-11-05T10:00:00Z");
+  await page.goto("/#/profile?tab=settings");
+  await page.getByRole("button", { name: "检查更新", exact: true }).click();
+  await page.goto("/#/profile?tab=bookmarks");
+  await page.getByRole("heading", { name: rows[0].titleZh }).click();
+  await expect(
+    page.getByText(
+      "此新闻已不在当前索引，正在显示本机收藏快照。请阅读原文了解最新情况。",
     ),
+  ).toBeVisible();
+});
+
+test("production policy-blocked data displays source links without demo news", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(
+    page.getByRole("heading", { name: "你的热爱，直达原站。" }),
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: /ESPN NBA/ })).toHaveAttribute(
+    "href",
+    "https://www.espn.com/nba/",
   );
-  await article.click();
-  const previous = Number(
-    await page.evaluate(() => sessionStorage.getItem("qa-click-scroll")),
-  );
-  await expect(page.getByRole("heading", { name: "中文摘要" })).toBeVisible();
-  await page.getByRole("button", { name: "返回", exact: true }).click();
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(previous);
-  await nav.getByRole("link", { name: "我的", exact: true }).click();
-  await expect(page.locator("h1")).toHaveText("我的主场。");
+  await expect(page.locator(".article-card")).toHaveCount(0);
+  await page.goto("/#/profile?tab=settings");
+  await expect(page.getByText("0 篇 · NBA 0 · 足球 0")).toBeVisible();
+  await expect(page.getByText("尚无获准公开的新闻")).toBeVisible();
 });

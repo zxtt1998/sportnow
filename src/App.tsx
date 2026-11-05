@@ -9,7 +9,9 @@ import { ArticlePage } from "./pages/Article/ArticlePage";
 import { ProfilePage } from "./pages/Profile/ProfilePage";
 import { SearchPage } from "./pages/Search/SearchPage";
 import { useUser } from "./stores/UserStore";
+import { useNewsUpdates } from "./hooks/useNewsUpdates";
 export default function App() {
+  useNewsUpdates();
   const { data } = useUser();
   return (
     <div data-density={data.preferences.density}>

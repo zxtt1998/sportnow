@@ -1,3 +1,5 @@
+import { parseNewsDocument } from "../services/news-validation";
+import type { Article } from "../types";
 import { getEntity, players } from "../data/entities";
 import type { UserData } from "../types";
 export const STORAGE_KEY = "sportnow:v1";
@@ -16,6 +18,24 @@ const record = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === "object" && !Array.isArray(v);
 const validDate = (v: unknown): v is string =>
   typeof v === "string" && Number.isFinite(Date.parse(v));
+
+const validSnapshot = (
+  value: unknown,
+  articleId: string,
+): Article | undefined => {
+  try {
+    const record = parseNewsDocument({
+      schemaVersion: 2,
+      generatedAt: "2026-11-05T00:00:00Z",
+      revision: "0".repeat(64),
+      articles: [value],
+    }).articles[0];
+    return record.id === articleId ? record : undefined;
+  } catch {
+    return undefined;
+  }
+};
+
 export function parseUserData(raw: string | null): UserData {
   const fallback = defaultData();
   if (!raw) return fallback;
@@ -74,6 +94,9 @@ export function parseUserData(raw: string | null): UserData {
               .map((b) => ({
                 articleId: String(b.articleId),
                 savedAt: String(b.savedAt),
+                ...(validSnapshot(b.snapshot, String(b.articleId))
+                  ? { snapshot: validSnapshot(b.snapshot, String(b.articleId)) }
+                  : {}),
               })),
             (x) => x.articleId,
           )

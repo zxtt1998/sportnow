@@ -76,7 +76,7 @@ export function Aside() {
       <p className="aside-fine">
         SPORTNOW © 2026
         <br />
-        第一阶段 · 本地演示版本
+        RSS 来源 · 本机阅读偏好
       </p>
     </aside>
   );

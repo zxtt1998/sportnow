@@ -1,4 +1,4 @@
-import type { Article, Sport } from "../types";
+import type { ArticleView as Article, Sport } from "../types";
 
 // These are original, fictional editorial scenarios, never representations of reported news.
 // A fixed clock keeps demo timestamps truthful across refreshes and offline sessions.

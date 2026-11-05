@@ -1,3 +1,5 @@
+import { toArticleView } from "../../services/news-validation";
+import { useNews } from "../../hooks/useNews";
 import { useState } from "react";
 import { Bookmark, Clock3, Heart, Settings2, Trash2 } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -11,7 +13,7 @@ import { newsService } from "../../services/news";
 import { useUser } from "../../stores/UserStore";
 import { FollowManager } from "./FollowManager";
 import { Settings } from "./Settings";
-import type { Article } from "../../types";
+import type { ArticleView as Article } from "../../types";
 const tabs = [
   { value: "bookmarks", label: "我的收藏", Icon: Bookmark },
   { value: "follows", label: "我的关注", Icon: Heart },
@@ -19,6 +21,7 @@ const tabs = [
   { value: "settings", label: "设置", Icon: Settings2 },
 ];
 export function ProfilePage() {
+  const news = useNews();
   const { data, clearHistory } = useUser();
   const [params, setParams] = useSearchParams();
   const tab = tabs.some((t) => t.value === params.get("tab"))
@@ -34,7 +37,11 @@ export function ProfilePage() {
       ? data.history.map((h) => h.articleId)
       : data.bookmarks.map((b) => b.articleId);
   const list = ids
-    .map((id) => newsService.get(id))
+    .map((id) => {
+      const current = newsService.get(id);
+      const snapshot = data.bookmarks.find((b) => b.articleId === id)?.snapshot;
+      return current ?? (snapshot ? toArticleView(snapshot) : undefined);
+    })
     .filter(
       (a): a is Article => !!a && (filter === "all" || a.sport === filter),
     );
@@ -119,7 +126,9 @@ export function ProfilePage() {
                   )
                 }
               />
-              <span>{list.length} 篇</span>
+              <span>
+                {list.length} 篇{news.loading ? " · 正在加载" : ""}
+              </span>
             </div>
             {list.length ? (
               <div className="news-list">
@@ -138,7 +147,7 @@ export function ProfilePage() {
                 }
                 description={
                   tab === "history"
-                    ? "读过的文章会出现在这里，方便随时回看。"
+                    ? "读过的文章会出现在这里；已过期或下线的文章不再出现在当前索引中。"
                     : "轻点新闻旁的收藏图标，好内容就不会错过。"
                 }
               >

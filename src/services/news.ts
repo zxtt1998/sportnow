@@ -1,6 +1,6 @@
-import { articles, DEMO_NOW } from "../data/articles";
+import { newsStore } from "./news-store";
 import { getEntity } from "../data/entities";
-import type { Article, FeedSort, Follow, Sport } from "../types";
+import type { ArticleView as Article, FeedSort, Follow, Sport } from "../types";
 
 export interface NewsQuery {
   sport?: Sport;
@@ -62,20 +62,32 @@ export function selectArticles(
         const diff = preference(b) - preference(a);
         if (diff) return diff;
       }
-      if (sort === "hot" && a.demoHeat !== b.demoHeat)
+      if (sort === "hot" && a.isDemo && b.isDemo && a.demoHeat !== b.demoHeat)
         return b.demoHeat - a.demoHeat;
       return Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
     });
 }
-// Replace this adapter with a validated fetch(`${import.meta.env.BASE_URL}data/news.json`)
-// in phase two. UI pages consume this contract rather than importing fixture files.
 export const newsService = {
-  list: (options: NewsQuery = {}) => selectArticles(articles, options),
-  get: (id: string) => articles.find((article) => article.id === id),
-  refresh: async () => ({
-    articles: [...articles],
-    isDemo: true as const,
-    refreshedAt: new Date().toISOString(),
-  }),
-  demoNow: DEMO_NOW,
+  list: (options: NewsQuery = {}) => {
+    const list = selectArticles(newsStore.getSnapshot().articles, options);
+    if (options.sort !== "recommended") return list;
+    const seen = new Set<string>();
+    const primary: Article[] = [];
+    const repeated: Article[] = [];
+    for (const a of list) {
+      const key = a.eventKey || a.id;
+      if (seen.has(key)) repeated.push(a);
+      else {
+        seen.add(key);
+        primary.push(a);
+      }
+    }
+    return [...primary, ...repeated];
+  },
+  get: (id: string) =>
+    newsStore.getSnapshot().articles.find((article) => article.id === id),
+  refresh: async () => {
+    await newsStore.refresh();
+    return newsStore.getSnapshot();
+  },
 };

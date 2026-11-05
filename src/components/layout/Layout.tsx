@@ -1,3 +1,4 @@
+import { useNews } from "../../hooks/useNews";
 import { useEffect, useState } from "react";
 import {
   Bookmark,
@@ -22,6 +23,7 @@ const navigation = [
   { to: "/profile", label: "我的", Icon: CircleUserRound },
 ];
 export function Layout() {
+  const news = useNews();
   useScrollMemory();
   const { storageError } = useUser();
   const [online, setOnline] = useState(navigator.onLine);
@@ -103,7 +105,7 @@ export function Layout() {
       {!online && (
         <div className="system-banner" role="status">
           <WifiOff size={15} />
-          当前离线 · 仍可阅读已缓存的演示内容
+          当前离线 · 仍可阅读已缓存的界面与新闻
         </div>
       )}
       {storageError && (
@@ -120,7 +122,7 @@ export function Layout() {
         <Brand />
         <span>
           为热爱在场。<span className="footer-divider"> / </span>
-          全部内容为原创演示
+          {news.mode === "demo" ? "全部内容为原创演示" : "尊重来源，阅读原文"}
         </span>
         <Link to="/profile?tab=bookmarks">
           <Bookmark size={14} />

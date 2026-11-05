@@ -1,8 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { articles } from "../src/data/articles";
 import { sources } from "../src/data/entities";
-import { newsService, selectArticles } from "../src/services/news";
+import { selectArticles } from "../src/services/news";
 import type { Follow } from "../src/types";
+const fixtures = {
+  list: (options: Parameters<typeof selectArticles>[1]) =>
+    selectArticles(articles, options),
+};
 
 describe("demo content integrity", () => {
   it("has at least 15 articles for each main sport with unique ids", () => {
@@ -35,16 +39,16 @@ describe("news adapter queries", () => {
       "C罗",
       "欧冠",
     ])
-      expect(newsService.list({ query }).length).toBeGreaterThan(0);
+      expect(fixtures.list({ query }).length).toBeGreaterThan(0);
     expect(
-      newsService.list({ query: "currY off THE ball" }).map((a) => a.id),
+      fixtures.list({ query: "currY off THE ball" }).map((a) => a.id),
     ).toContain("nba-04");
     expect(
-      newsService.list({ query: "足球" }).some((a) => a.sport === "football"),
+      fixtures.list({ query: "足球" }).some((a) => a.sport === "football"),
     ).toBe(true);
   });
   it("combines category, sport, entity and text filters", () => {
-    const found = newsService.list({
+    const found = fixtures.list({
       sport: "football",
       tag: "五大联赛",
       entityId: "madrid",
@@ -59,14 +63,14 @@ describe("news adapter queries", () => {
           a.tags.includes("五大联赛"),
       ),
     ).toBe(true);
-    expect(
-      newsService.list({ sport: "nba", query: "Cristiano Ronaldo" }),
-    ).toEqual([]);
-    expect(newsService.list({ query: "不存在的新闻xyz" })).toEqual([]);
+    expect(fixtures.list({ sport: "nba", query: "Cristiano Ronaldo" })).toEqual(
+      [],
+    );
+    expect(fixtures.list({ query: "不存在的新闻xyz" })).toEqual([]);
   });
   it("sorts latest chronologically and hot by explicitly simulated score", () => {
-    const latest = newsService.list({ sort: "latest" });
-    const hot = newsService.list({ sort: "hot" });
+    const latest = fixtures.list({ sort: "latest" });
+    const hot = fixtures.list({ sort: "hot" });
     expect(
       latest.every((a, i) => !i || a.publishedAt <= latest[i - 1].publishedAt),
     ).toBe(true);
@@ -82,14 +86,8 @@ describe("news adapter queries", () => {
     const list = selectArticles(articles, { sort: "recommended", follows });
     expect(list[0].playerIds).toContain("curry");
     expect(articles.map((a) => a.id)).toEqual(ids);
-    expect(newsService.list({ sort: "recommended", follows: [] })).toEqual(
-      newsService.list({ sort: "latest" }),
+    expect(fixtures.list({ sort: "recommended", follows: [] })).toEqual(
+      fixtures.list({ sort: "latest" }),
     );
-  });
-  it("refreshes local content without generating false news or changing timestamps", async () => {
-    const result = await newsService.refresh();
-    expect(result.isDemo).toBe(true);
-    expect(result.articles).toEqual(articles);
-    expect(result.articles).not.toBe(articles);
   });
 });

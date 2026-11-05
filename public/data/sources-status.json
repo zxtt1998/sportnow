@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "newsRevision": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "updatedAt": "2026-11-05T05:17:38Z",
+  "lastSuccessfulUpdate": null,
+  "lastRunStatus": "ok",
+  "counts": {
+    "total": 0,
+    "nba": 0,
+    "football": 0
+  },
+  "sources": [
+    {
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "category": "nba",
+      "feedUrl": "https://www.espn.com/espn/rss/nba/news",
+      "homepageUrl": "https://www.espn.com/nba/",
+      "fetchStatus": "ok",
+      "publicationStatus": "blocked",
+      "lastSuccessAt": "2026-11-05T04:55:53Z",
+      "lastError": null,
+      "httpStatus": 200,
+      "fetchedCount": 16,
+      "acceptedCount": 0,
+      "policyReason": "RSS 可访问，但许可说明页要求机器人验证，未绕过验证；尚未核实公开存储、转载或翻译许可。只显示来源入口，等待明确许可。",
+      "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+      "policyHash": "6511cc75c4d54b9a90765d678132d4211aefc2aa3e197a666dedcbdca36fd05f",
+      "etag": null,
+      "lastModified": null,
+      "feedFingerprint": "13862f084a72fbe80d353527118c5ce361f7edde5713476ca2e774a04952b03a"
+    },
+    {
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "category": "football",
+      "feedUrl": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+      "homepageUrl": "https://www.bbc.com/sport/football",
+      "fetchStatus": "ok",
+      "publicationStatus": "blocked",
+      "lastSuccessAt": "2026-11-05T04:55:53Z",
+      "lastError": null,
+      "httpStatus": 200,
+      "fetchedCount": 69,
+      "acceptedCount": 0,
+      "policyReason": "当前 RSS 使用条款未能完整核实；可查阅的 BBC 官方条款（2022 年版本）对 RSS 改动、元数据提取有约束。未确认公开 JSON、历史保留及翻译许可，只显示来源入口。",
+      "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+      "policyHash": "e7e96e422f2751e5012265f076aafb5e163721afd69be83049682c3fc50fe52f",
+      "etag": null,
+      "lastModified": null,
+      "feedFingerprint": "c4150520683eb9a92a0664863a6e9f4ccf0e522973ca8ac0a50e7c79c7b36aae"
+    },
+    {
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "category": "football",
+      "feedUrl": "https://feeds.bbci.co.uk/sport/football/champions-league/rss.xml",
+      "homepageUrl": "https://www.bbc.com/sport/football/champions-league",
+      "fetchStatus": "ok",
+      "publicationStatus": "blocked",
+      "lastSuccessAt": "2026-11-05T04:55:53Z",
+      "lastError": null,
+      "httpStatus": 200,
+      "fetchedCount": 26,
+      "acceptedCount": 0,
+      "policyReason": "与 BBC 足球源适用相同核查限制。当前未确认公开 JSON 聚合、历史保留与翻译许可，只显示来源入口。",
+      "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+      "policyHash": "d778753c1f8bca1b8f4dfcbae57e7efd8df83accd7e815a0e5d996936aacebde",
+      "etag": null,
+      "lastModified": null,
+      "feedFingerprint": "3cf92e3a7cbce67954d43f0c8bbb4fb00b27074dada63d419a01d4aae8e6db81"
+    }
+  ],
+  "translation": {
+    "engine": "argos",
+    "libraryVersion": "1.11.0",
+    "modelVersion": "1.9",
+    "available": true,
+    "policyBlockedSources": 3
+  }
+}

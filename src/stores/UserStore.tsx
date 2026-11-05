@@ -7,13 +7,13 @@ import {
 } from "react";
 import type { ReactNode } from "react";
 import { players } from "../data/entities";
-import type { UserData, UserPreferences } from "../types";
+import type { Article, UserData, UserPreferences } from "../types";
 import { defaultData, parseUserData, STORAGE_KEY } from "./storage";
 
 interface Store {
   data: UserData;
   storageError: boolean;
-  toggleBookmark: (id: string) => void;
+  toggleBookmark: (id: string, snapshot?: Article) => void;
   toggleFollow: (id: string) => void;
   markRead: (id: string) => void;
   clearHistory: () => void;
@@ -66,13 +66,17 @@ export function UserProvider({ children }: { children: ReactNode }) {
     return () => system.removeEventListener("change", apply);
   }, [data.preferences.theme]);
   const toggleBookmark = useCallback(
-    (id: string) =>
+    (id: string, snapshot?: Article) =>
       setData((d) => ({
         ...d,
         bookmarks: d.bookmarks.some((b) => b.articleId === id)
           ? d.bookmarks.filter((b) => b.articleId !== id)
           : [
-              { articleId: id, savedAt: new Date().toISOString() },
+              {
+                articleId: id,
+                savedAt: new Date().toISOString(),
+                ...(snapshot ? { snapshot } : {}),
+              },
               ...d.bookmarks,
             ],
       })),

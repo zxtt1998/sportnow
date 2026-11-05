@@ -30,6 +30,7 @@ export interface Follow {
 export interface Bookmark {
   articleId: string;
   savedAt: string;
+  snapshot?: Article;
 }
 export interface Video {
   id: string;
@@ -38,7 +39,7 @@ export interface Video {
   provider: string;
   isDemo: boolean;
 }
-export interface Article {
+export interface ArticleView {
   id: string;
   title: string;
   englishTitle: string;
@@ -56,6 +57,9 @@ export interface Article {
   demoHeat: number;
   isDemo: boolean;
   videos: Video[];
+  record?: Article;
+  sourceName?: string;
+  eventKey?: string;
 }
 export interface UserPreferences {
   theme: "light" | "dark" | "system";
@@ -74,3 +78,81 @@ export interface UserData {
   history: ReadEntry[];
 }
 export type FeedSort = UserPreferences["sort"] | "hot";
+
+export interface ContentPolicy {
+  mode: "blocked" | "headlines-only" | "licensed-translation";
+  allowHeadlines: boolean;
+  allowSummary: boolean;
+  allowTitleTranslation: boolean;
+  allowSummaryTranslation: boolean;
+  licenseUrl: string;
+  reviewedAt: string;
+  permissionReference: string;
+  reason: string;
+}
+export interface Article {
+  id: string;
+  category: "nba" | "football";
+  sourceId: string;
+  sourceName: string;
+  titleOriginal: string;
+  titleZh: string;
+  summaryOriginal: string;
+  summaryZh: string;
+  originalUrl: string;
+  publishedAt: string;
+  fetchedAt: string;
+  tags: string[];
+  teamIds: string[];
+  playerIds: string[];
+  translationStatus:
+    | "translated"
+    | "partial"
+    | "unavailable"
+    | "failed"
+    | "skipped_policy"
+    | "pending";
+  translationFields: { title: string; summary: string };
+  translationVersion: string;
+  contentPolicy: ContentPolicy;
+  isDemo: false;
+  eventKey: string;
+}
+export interface NewsDocument {
+  schemaVersion: 2;
+  generatedAt: string;
+  revision: string;
+  articles: Article[];
+}
+export interface SourceStatus {
+  sourceId: string;
+  sourceName: string;
+  category: "nba" | "football";
+  feedUrl: string;
+  homepageUrl: string;
+  fetchStatus: "ok" | "error" | "disabled";
+  publicationStatus: "allowed" | "blocked";
+  lastSuccessAt: string | null;
+  lastError: { code: string; message: string; at: string } | null;
+  httpStatus: number | null;
+  fetchedCount: number;
+  acceptedCount: number;
+  policyReason: string;
+  licenseUrl: string;
+}
+export interface SourcesStatusDocument {
+  schemaVersion: 2;
+  newsRevision: string;
+  updatedAt: string;
+  lastSuccessfulUpdate: string | null;
+  lastRunStatus: "ok" | "partial" | "failed";
+  counts: { total: number; nba: number; football: number };
+  sources: SourceStatus[];
+  translation: {
+    engine: string;
+    libraryVersion: string;
+    modelVersion: string;
+    available: boolean;
+    policyBlockedSources: number;
+  };
+}

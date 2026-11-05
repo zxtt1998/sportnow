@@ -74,6 +74,7 @@ export const teams: Team[] = [
   },
 ];
 export const players: Player[] = [
+  { id: "duncan", name: "蒂姆·邓肯", englishName: "Tim Duncan", shortName: "邓肯", sport: "nba", teamId: "spurs", color: "#6f7786" },
   {
     id: "ronaldo",
     name: "克里斯蒂亚诺·罗纳尔多",

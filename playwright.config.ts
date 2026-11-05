@@ -35,7 +35,7 @@ export default defineConfig({
   webServer: process.env.E2E_BASE_URL
     ? undefined
     : {
-        command: "npm run preview -- --host 127.0.0.1 --port 4173 --strictPort",
+        command: "node tests/e2e/server.mjs",
         port: 4173,
         reuseExistingServer: !process.env.CI,
       },

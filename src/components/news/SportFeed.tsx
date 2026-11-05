@@ -1,3 +1,5 @@
+import { NewsAvailability, NewsNotice } from "./NewsStatus";
+import { useNews } from "../../hooks/useNews";
 import { ArrowDownWideNarrow, Search } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { newsService } from "../../services/news";
@@ -15,6 +17,7 @@ export function SportFeed({
 }: {
   sport: Extract<Sport, "nba" | "football">;
 }) {
+  const news = useNews();
   const [params, setParams] = useSearchParams();
   const category = categories[sport].includes(params.get("category") || "")
     ? params.get("category")!
@@ -27,7 +30,7 @@ export function SportFeed({
     sort: recommended ? "recommended" : "latest",
     follows: data.follows,
   });
-  const featured = items.find((a) => a.image);
+  const featured = items.find((a) => a.image) ?? items[0];
   const setCategory = (value: string) => {
     setParams(
       (p) => {
@@ -82,10 +85,7 @@ export function SportFeed({
               </button>
             ))}
           </div>
-          <div className="demo-notice">
-            <span className="demo-notice-dot" />
-            <span>本地演示内容 · 非真实新闻报道</span>
-          </div>
+          <NewsNotice />
           {featured && <ArticleCard article={featured} variant="feature" />}
           <div className="section-title feed-list-heading">
             <h2>
@@ -115,21 +115,26 @@ export function SportFeed({
                 <ArticleCard article={article} key={article.id} />
               ))}
           </div>
-          {items.length === 0 && (
-            <EmptyState
-              title="这个分类还没有演示内容"
-              description="试试其他分类，或查看全部新闻。"
-            >
-              <button
-                className="primary-button"
-                onClick={() => setCategory("全部")}
+          {items.length === 0 && category === "全部" ? (
+            <NewsAvailability sport={sport} />
+          ) : (
+            items.length === 0 && (
+              <EmptyState
+                title="这个分类暂无新闻"
+                description="试试其他分类，或查看全部新闻。"
               >
-                查看全部
-              </button>
-            </EmptyState>
+                <button
+                  className="primary-button"
+                  onClick={() => setCategory("全部")}
+                >
+                  查看全部
+                </button>
+              </EmptyState>
+            )
           )}
           <p className="end-copy">
-            {items.length} 篇原创演示 · 发布时间基于固定演示时钟
+            {items.length} 篇
+            {news.mode === "demo" ? "原创演示" : "获准公开的新闻索引"}
           </p>
         </div>
         <Aside />
