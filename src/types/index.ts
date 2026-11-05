@@ -80,7 +80,7 @@ export interface UserData {
 export type FeedSort = UserPreferences["sort"] | "hot";
 
 export interface ContentPolicy {
-  mode: "blocked" | "headlines-only" | "licensed-translation";
+  mode: "blocked" | "headlines-only" | "licensed-translation" | "personal-rss";
   allowHeadlines: boolean;
   allowSummary: boolean;
   allowTitleTranslation: boolean;
@@ -131,7 +131,7 @@ export interface SourceStatus {
   feedUrl: string;
   homepageUrl: string;
   fetchStatus: "ok" | "error" | "disabled";
-  publicationStatus: "allowed" | "blocked";
+  publicationStatus: "allowed" | "blocked" | "user-enabled";
   lastSuccessAt: string | null;
   lastError: { code: string; message: string; at: string } | null;
   httpStatus: number | null;

@@ -16,8 +16,8 @@ export function NewsNotice() {
             : news.cached
               ? "正在显示上次成功缓存 · 可能不是最新新闻"
               : news.document?.articles.length
-                ? "RSS 原文索引 · 中文仅显示获准翻译的内容"
-                : "RSS 来源导航 · 条目展示许可待确认"}
+                ? "RSS 新闻 · 中文为离线机器翻译"
+                : "暂无新闻 · 可前往来源阅读"}
       </span>
     </div>
   );
@@ -63,7 +63,7 @@ export function NewsAvailability({ sport }: { sport?: "nba" | "football" }) {
           <p>
             {news.error && !news.document
               ? "暂时无法读取新闻数据，请联网后重试。"
-              : "来源已配置。公开保存、聚合与翻译需要明确许可；确认前可直接前往官方来源阅读。"}
+              : "目前暂无可显示的新闻，请稍后刷新，或直接前往官方来源阅读。"}
           </p>
         </div>
       </div>
@@ -147,7 +147,7 @@ export function NewsStatusPanel() {
           <dd>
             {news.sources?.lastSuccessfulUpdate
               ? absoluteTime(news.sources.lastSuccessfulUpdate)
-              : "尚无获准公开的新闻"}
+              : "尚无新闻更新"}
           </dd>
         </div>
         <div>

@@ -134,7 +134,7 @@ export function SportFeed({
           )}
           <p className="end-copy">
             {items.length} 篇
-            {news.mode === "demo" ? "原创演示" : "获准公开的新闻索引"}
+            {news.mode === "demo" ? "原创演示" : "RSS 新闻索引"}
           </p>
         </div>
         <Aside />

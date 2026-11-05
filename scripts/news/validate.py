@@ -24,7 +24,9 @@ def validate_news(data: dict) -> None:
         parse_date(article["publishedAt"])
         parse_date(article["fetchedAt"])
         policy = article["contentPolicy"]
-        if not policy["allowHeadlines"] or not policy["permissionReference"]:
+        if not policy["allowHeadlines"] or (
+            policy["mode"] != "personal-rss" and not policy["permissionReference"]
+        ):
             raise ValueError("Publication permission missing")
         if article["summaryOriginal"] and not policy["allowSummary"]:
             raise ValueError("Summary storage not permitted")
@@ -54,7 +56,7 @@ def validate_pair(news: dict, status: dict) -> None:
     for source in status["sources"]:
         if source["fetchStatus"] not in {"ok", "error", "disabled"}:
             raise ValueError("Invalid source fetch status")
-        if source["publicationStatus"] not in {"allowed", "blocked"}:
+        if source["publicationStatus"] not in {"allowed", "blocked", "user-enabled"}:
             raise ValueError("Invalid source publication status")
         if source.get("lastSuccessAt"):
             parse_date(source["lastSuccessAt"])

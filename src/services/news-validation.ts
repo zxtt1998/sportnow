@@ -88,10 +88,12 @@ export function parseNewsDocument(value: unknown): NewsDocument {
     const p = a.contentPolicy;
     if (
       !record(p) ||
-      !["headlines-only", "licensed-translation"].includes(String(p.mode)) ||
+      !["headlines-only", "licensed-translation", "personal-rss"].includes(
+        String(p.mode),
+      ) ||
       p.allowHeadlines !== true ||
       typeof p.permissionReference !== "string" ||
-      !p.permissionReference.trim() ||
+      (p.mode !== "personal-rss" && !p.permissionReference.trim()) ||
       !https(p.licenseUrl)
     )
       throw new Error("缺少可公开展示的来源许可");
@@ -143,7 +145,9 @@ export function parseSourcesStatus(
       !https(s.homepageUrl) ||
       !https(s.licenseUrl) ||
       !["ok", "error", "disabled"].includes(String(s.fetchStatus)) ||
-      !["allowed", "blocked"].includes(String(s.publicationStatus)) ||
+      !["allowed", "blocked", "user-enabled"].includes(
+        String(s.publicationStatus),
+      ) ||
       typeof s.policyReason !== "string" ||
       !Number.isInteger(s.fetchedCount) ||
       !Number.isInteger(s.acceptedCount)

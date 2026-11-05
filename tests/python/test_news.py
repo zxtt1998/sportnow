@@ -333,6 +333,36 @@ class Pipeline(unittest.TestCase):
         self.assertTrue(article["titleOriginal"])
         self.assertEqual(article["translationStatus"], "failed")
 
+    def test_explicit_personal_rss_mode_is_not_publisher_permission(self):
+        s = source()
+        s["policy"].update(
+            mode="personal-rss",
+            permissionReference="",
+            allowSummary=True,
+            allowTitleTranslation=True,
+            allowSummaryTranslation=True,
+        )
+        translator = Mock(available=True)
+        translator.translate.return_value = "这是自有测试文本的翻译。"
+        self.run_pipeline(
+            [s], fetcher([item("Owned test headline")]), translator=translator
+        )
+        news, status = self.read()
+        article = news["articles"][0]
+        self.assertTrue(article["titleZh"])
+        self.assertTrue(article["summaryZh"])
+        self.assertEqual(article["contentPolicy"]["permissionReference"], "")
+        self.assertEqual(status["sources"][0]["publicationStatus"], "user-enabled")
+        validate_pair(news, status)
+        s["policy"].update(
+            mode="blocked",
+            allowHeadlines=False,
+            allowTitleTranslation=False,
+            allowSummaryTranslation=False,
+        )
+        self.run_pipeline([s], fetcher([]))
+        self.assertEqual(self.read()[0]["articles"], [])
+
     def test_production_schema_rejects_demo_and_status_revision_mismatch(self):
         self.run_pipeline([source()], fetcher([item()]))
         news, status = self.read()

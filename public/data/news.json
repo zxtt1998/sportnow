@@ -1,6 +1,2863 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T04:55:53Z",
-  "revision": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "articles": []
+  "generatedAt": "2026-11-05T05:54:26Z",
+  "revision": "6e662bc559743671c90a73944eca69f1aa410a728cb481a2b6b5b3713c725706",
+  "articles": [
+    {
+      "id": "news-5e236747407bf159d63c7d03",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Finals bound? LeBron pumps breaks despite 76ers' blistering start",
+      "titleZh": "决赛? LeBron泵尽管开始起泡,但还是断裂了",
+      "summaryOriginal": "LeBron James is cautioning against any proclamations the 76ers are NBA Finals-bound despite a blistering 8-1 start.",
+      "summaryZh": "勒布朗詹姆斯警告不要宣布76人NBA总决赛 不顾8比1的开始",
+      "originalUrl": "https://espn.com/nba/story/_/id/50385564/lebron-says-too-early-talking-finals-8-1-start",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "965392dd6bd00c47"
+    },
+    {
+      "id": "news-6a310ad50487b9e64bfee531",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Warriors withholding payments to Porzingis on $20M salary, sources say",
+      "titleZh": "金州勇士扣付给Porzingis的20M工资,",
+      "summaryOriginal": "The Golden State Warriors are not delivering semimonthly payments to veteran center Kristaps Porzingis on his $20 million salary, league sources told ESPN, ruling that the currently absent center is not rendering his services.",
+      "summaryZh": "金州勇士没有向退伍老兵中心Kristaps Porzingis支付2000万美元薪水, 联盟消息人士告诉ESPN,",
+      "originalUrl": "https://espn.com/nba/story/_/id/50379460/warriors-not-making-payments-porzingis-sources-say",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [
+        "warriors"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "83f7b1ea27774227"
+    },
+    {
+      "id": "news-76368c653534ffefea521421",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Hornets' Knueppel exits 6 minutes into season debut with leg soreness",
+      "titleZh": "黄蜂队的Knueppel在赛季首场6分钟前 腿部疼痛",
+      "summaryOriginal": "Charlotte Hornets guard Kon Knueppel exited his season debut after appearing to aggravate the left hamstring injury that had sidelined him to start the year.",
+      "summaryZh": "夏洛特·霍内特斯(英语:Charlotte Hornets)卫兵孔·克努埃佩尔(英语:Kon Knuepel)在看似加重了左腿吊伤导致他本年度开局后退出了赛季首秀.",
+      "originalUrl": "https://espn.com/nba/story/_/id/50384048/hornets-knueppel-exits-season-debut-left-leg-injury",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA",
+        "伤病"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "2d69b8b92ae28836"
+    },
+    {
+      "id": "news-c7e9edd16f4a3bcaf6483412",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Raptors' Leonard completes knee treatment, begins 'return to play process'",
+      "titleZh": "猛禽 Leonard完成膝盖治疗 开始\"回归游戏过程\"",
+      "summaryOriginal": "Kawhi Leonard has completed a treatment to address left knee swelling and is beginning the \"return to play process\" in Toronto, the Raptors announced.",
+      "summaryZh": "Kawhi Leonard完成了治疗,以解决左膝肿胀问题,并且正在多伦多开始\"回归游戏过程\",猛禽队宣布.",
+      "originalUrl": "https://espn.com/nba/story/_/id/50373620/kawhi-leonard-finishes-knee-treatment-begins-return-process",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "906d116d4288f8f5"
+    },
+    {
+      "id": "news-87b9051d019736af387cc40f",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Lacob lauds landing Landeborg: Warriors 'got this one right'",
+      "titleZh": "(笑声) Lacob lauds down Landeborg: 金州勇士 '得到了这个权利'",
+      "summaryOriginal": "Warriors owner Joe Lacob is already convinced the team nailed its drafting of Yaxel Lendeborg, saying \"we got this one right.\"",
+      "summaryZh": "金州勇士车主乔·拉科布已经说服了团队将亚克塞尔·伦德堡的起草工作钉上钉子,称\"我们得到了这个正确\".",
+      "originalUrl": "https://espn.com/nba/story/_/id/50380187/joe-lacob-thinks-warriors-nailed-drafting-yaxel-lendeborg",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [
+        "warriors"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "9ce16d94e2c1d9a5"
+    },
+    {
+      "id": "news-f8918af727ce965bdfe70fef",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Doncic has 2nd technical of season rescinded by NBA",
+      "titleZh": "Doncic被NBA取消赛季第2个技术",
+      "summaryOriginal": "The technical foul assessed to Los Angeles Lakers star Luka Doncic late in the second quarter of Monday's 138-117 win over the Miami Heat was rescinded, the NBA announced.",
+      "summaryZh": "技术犯规被评为洛杉矶湖人明星卢卡·唐西奇 周一第二季度晚期138-117战胜迈阿密热门 被取消,NBA宣布.",
+      "originalUrl": "https://espn.com/nba/story/_/id/50374485/lakers-luka-doncic-2nd-technical-season-rescinded-nba",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [
+        "lakers"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "754891016405e69d"
+    },
+    {
+      "id": "news-b924ac40c7fdb85f8ed2b20b",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Dumonts now controlling owners of Mavs with nearly 70% share",
+      "titleZh": "Dumonts公司现在控制着拥有近70%股份的Mavs公司的所有人",
+      "summaryOriginal": "Sivan and Patrick Dumont purchased Miriam Adelson's shares of the Mavericks last month, making the Dumont family the controlling owners of the franchise.",
+      "summaryZh": "西万和帕特里克·杜蒙上个月购买了米里亚姆·阿德尔森的马弗里克家族股份,使得杜蒙家族成为该特许经营权的控股人.",
+      "originalUrl": "https://espn.com/nba/story/_/id/50371176/dumonts-take-controlling-owners-mavericks",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "6189a9bfb061f59d"
+    },
+    {
+      "id": "news-caf82c4881b0686dac6c0fd2",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "NBA defends Rwanda partnership in letter to concerned senators",
+      "titleZh": "NBA在给有关参议员的信中为卢旺达伙伴关系辩护",
+      "summaryOriginal": "NBA deputy commissioner Mark Tatum cited the removal of a military-backed team from the Basketball Africa League as evidence the NBA has adapted to changing U.S. policies toward the East African nation.",
+      "summaryZh": "NBA副委员长马克·塔图姆(Mark Tatum)引述了一支由军方支持的球队从篮球非洲联赛中除名,作为NBA适应美国改变对东非国家政策的证据.",
+      "originalUrl": "https://espn.com/nba/story/_/id/50370258/nba-defends-rwanda-partnership-letter-concerned-senators",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "95077694348bffa4"
+    },
+    {
+      "id": "news-248aa5e1174fd5172b091062",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "🏀 Contract Year All-Stars: Grizzlies' Jerome and 11 others playing for a payday",
+      "titleZh": "合同年全明星赛:灰熊杰罗姆和另外11人参加发薪日比赛.",
+      "summaryOriginal": "Bobby Marks selects a roster full of players with contract decisions that could shape the trade deadline and summer of 2027.",
+      "summaryZh": "鲍比·马克斯(Bobby Marks)挑选出一个充满了合同决定权的玩家名册,这可以决定2027年的贸易期限和夏天.",
+      "originalUrl": "https://espn.com/nba/story/_/id/50359904/ty-jerome-vanvleet-mitchell-contract-predictions",
+      "publishedAt": "2026-11-05T05:46:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA",
+        "交易"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "3961f5ced881bfbf"
+    },
+    {
+      "id": "news-97a91d4bdb4110d2d95004e0",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Brugge up to ninth with win over PSV",
+      "titleZh": "Bruggge 最高到第九 胜过 PSV",
+      "summaryOriginal": "Carlos Forbs scores the winning goal as Club Brugge keep up their push for knockout stage qualification, beating PSV 2-1 away on matchday four of the UEFA Champions League group phase.",
+      "summaryZh": "卡洛斯·福布斯(Carlos Forbs)以布鲁格俱乐部(Club Brugge)继续推进淘汰赛阶段资格赛,在欧冠小组赛阶段的比赛第4天将PSV 2-1淘汰出局而得分入球.",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/c8r4y5ky6nk2o",
+      "publishedAt": "2026-11-04T23:24:52Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "670c820abdaf2043"
+    },
+    {
+      "id": "news-fae37ee7ba020d874c872154",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Why Iraola's Liverpool are still a work in progress",
+      "titleZh": "为什么伊劳拉的利物浦还在进行中",
+      "summaryOriginal": "Champions League analyst Stephen Warnock and Guillem Balague believe Liverpool's defensive weaknesses combined with the experimentation of playing Bradley Barcola up front, highlight Andoni Iraola's team are still trying to find their identity following a 3-2 defeat to Fenerbahce in the Champions League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/c9rky37kx37lo",
+      "publishedAt": "2026-11-04T23:22:35Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "liverpool"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "partial",
+      "translationFields": {
+        "title": "translated",
+        "summary": "failed"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "3c49904548134cfa"
+    },
+    {
+      "id": "news-ec83112ab0bb9a967cc1feca",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "World record 51 red cards shown in Brazilian youth game",
+      "titleZh": "巴西青年赛显示的世界纪录 51 红牌",
+      "summaryOriginal": "A world record of 43 players and eight members of staff were sent off during an under-20 championship match between Uberlandia and Mamore in Brazil.",
+      "summaryZh": "在Uberlandia和巴西的马莫尔举行的20岁以下冠军赛中,有43名球员和8名球员的世界纪录被送出.",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cmy0rz7741ywo",
+      "publishedAt": "2026-11-04T23:22:27Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "translated",
+      "translationFields": {
+        "title": "translated",
+        "summary": "translated"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "1d80ad3fe77fa4b0"
+    },
+    {
+      "id": "news-27a39d69614be73843e8ea05",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Scotland U21 boss hails Donovan, Miller and Wilson attitude",
+      "titleZh": "",
+      "summaryOriginal": "Under-21s head coach Tony Docherty is delighted with the buy-in from the three players who have dropped down from Scotland's senior squad.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/ckyvrzgl9dqgo",
+      "publishedAt": "2026-11-04T23:18:03Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "39cdd1ecf3caf84c"
+    },
+    {
+      "id": "news-6e8f2e4141e9052bc984d322",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Viking run riot against Sabah to boost qualification hopes",
+      "titleZh": "",
+      "summaryOriginal": "Viking come from behind to beat 10-man Sabah and get their first win of the league phase in this season's Champions League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cv8ezggrg24yo",
+      "publishedAt": "2026-11-04T23:17:54Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "badc5631cf033c5a"
+    },
+    {
+      "id": "news-03adfb78b68d206f9f747578",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Como score nine to make Champions League history",
+      "titleZh": "",
+      "summaryOriginal": "Anastasios Douvikas scores a hat-trick as Como produce a stunning 9-1 away win over Lens on match day four, recording the biggest away win in Champions League history.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/c6wyr8gzzr1zo",
+      "publishedAt": "2026-11-04T22:45:45Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "d4070bb1a8021f27"
+    },
+    {
+      "id": "news-f7bdcf2516953709cb74e592",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Another 'miracle' in Istanbul - but this one hurt Liverpool",
+      "titleZh": "",
+      "summaryOriginal": "Liverpool conceded \"cheap\" and \"messy\" goals in their defeat by Fenerbahce, says boss Andoni Iraola, as former Reds hero Dirk Kuyt celebrates a \"miracle\" in Istanbul.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cwx28z712rd8o",
+      "publishedAt": "2026-11-04T22:38:24Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "liverpool"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "32d13872ff6576e8"
+    },
+    {
+      "id": "news-740a52cadc19e25d79515958",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Dortmund take narrow win over Real Betis",
+      "titleZh": "",
+      "summaryOriginal": "Borussia Dortmund gain a home victory over Real Betis to end the Spanish side's winning run in the Champions League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/c699zjkd7yrvo",
+      "publishedAt": "2026-11-04T22:31:57Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "fbc58d4b0066c298"
+    },
+    {
+      "id": "news-7f0fd3c3c7bff4f22090dc54",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Updated NBA Power Rankings: Summing up the starts for all 30 teams",
+      "titleZh": "",
+      "summaryOriginal": "Here's where every team ranks after two weeks of action, plus the four words used to describe how each team has started the season.",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/nba/story/_/id/50371604/nba-power-rankings-30-teams-rank-week-two-describe-season",
+      "publishedAt": "2026-11-04T22:20:54Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "13c131d3b46f0d8e"
+    },
+    {
+      "id": "news-143e3e37ac590a1ed8283310",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Emphatic Porto thrash Napoli in second-half romp",
+      "titleZh": "",
+      "summaryOriginal": "Porto score three goals in the final 20 minutes of the game to pull away and seal a comfortable victory against Napoli, who are unable to match their Portuguese opponents in the second half.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cr1ex9vx3y50o",
+      "publishedAt": "2026-11-04T22:17:34Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "b260f8d2e3b8cf25"
+    },
+    {
+      "id": "news-7605e78e8e9e8de84e49feb8",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Haaland scores winner as Man City beat Leipzig",
+      "titleZh": "",
+      "summaryOriginal": "Erling Haaland scores the winning goal as Manchester City overcome being pegged back twice to beat RB Leipzig 3-2 on match day four of the UEFA Champions League group phase.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/ckz65ey5q29zo",
+      "publishedAt": "2026-11-04T22:15:31Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "city"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "14e7bf14deda77f9"
+    },
+    {
+      "id": "news-5f629cc961bfd029f6227737",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Arsenal survive late Slavia scare for hard-fought win",
+      "titleZh": "",
+      "summaryOriginal": "Arsenal earn their third win from four in the Champions League as goals from Noni Madueke and Victor Gyokeres are too much for Slavia Prague, despite a valiant late fight from the hosts to get back into the game.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cq4g1jwnzmyro",
+      "publishedAt": "2026-11-04T22:10:07Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "f15ab5a6e4ae4c71"
+    },
+    {
+      "id": "news-fe643c0b34bb00baaf8a7396",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Liverpool crumble at Kuyt's Fenerbahce",
+      "titleZh": "",
+      "summaryOriginal": "Liverpool are defeated by Turkish side Fenerbahce, who twice fought back from behind to seal a famous victory, ending the Reds' perfect start to this year's Champions League after four games.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cqy7ljmzx6d6o",
+      "publishedAt": "2026-11-04T22:04:16Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "liverpool"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "9e05acb6c55ec052"
+    },
+    {
+      "id": "news-3b3413853d1323883381fae5",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Valverde stunner earns Real Madrid late win at AEK Athens",
+      "titleZh": "",
+      "summaryOriginal": "Real Madrid continue their 100% start to their Champions League campaign with another late win, this time through captain Federico Valverde to inflict Athens' third loss in a row.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/ck7vpj0ggqr8o",
+      "publishedAt": "2026-11-04T22:04:13Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "皇家马德里",
+        "足球"
+      ],
+      "teamIds": [
+        "madrid"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "b7c83f6bbde8fed5"
+    },
+    {
+      "id": "news-3d713f8ee66c105782587181",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Bodo/Glimt and Lille take a point apiece in goalless draw",
+      "titleZh": "",
+      "summaryOriginal": "Norway's Bodo/Glimt play out a goalless draw at home against French side Lille in the Champions League, leaving both sides in the bottom half of the league phase following an uninspiring affair.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/ckwy4g1d5dpjo",
+      "publishedAt": "2026-11-04T22:04:11Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "ecfc77c8995d23b3"
+    },
+    {
+      "id": "news-1ab0608b2b56b2a4f6ffe461",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Manchester United beat Roma in epic second-half comeback",
+      "titleZh": "",
+      "summaryOriginal": "Manchester United drag themselves up off the canvas to come from two goals down to record a sensational Champions League victory against Roma at Old Trafford.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cqrmy8lrz0wno",
+      "publishedAt": "2026-11-04T22:04:05Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "8d7370b015424c8d"
+    },
+    {
+      "id": "news-53f2269e4023e3b2f002947c",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Raphinha scores twice as Barcelona beat Aston Villa",
+      "titleZh": "",
+      "summaryOriginal": "Barcelona end Aston Villa's perfect Champions League start with an enthralling win at the Spotify Nou Camp.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cmlylzndw52ko",
+      "publishedAt": "2026-11-04T22:04:02Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "barcelona"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "e99a0ae031ed6dfe"
+    },
+    {
+      "id": "news-8e7cad6d97d3c6010b763595",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Bayern continue unbeaten CL start with win at Atletico",
+      "titleZh": "",
+      "summaryOriginal": "Bayern Munich continued their unbeaten start to the Champions League season with an assured 2-0 victory at Atletico Madrid.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cxm23ry19n9po",
+      "publishedAt": "2026-11-04T22:03:54Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "bayern"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "5f1234835858097b"
+    },
+    {
+      "id": "news-23a5a96a4566a8b3befb1dcf",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Spence stars as Inter Milan cruise to win at Feyenoord",
+      "titleZh": "",
+      "summaryOriginal": "England full-back Djed Spence staring as Inter Milan bounc back from their derby defeat with a comfortable Champions League victory over Feyenoord.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/ck4g1ev58yw7o",
+      "publishedAt": "2026-11-04T22:03:51Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "2db6b4cbe94fcf16"
+    },
+    {
+      "id": "news-0ee2d1ea9a9718ebd7c7034c",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Emery in line for new Villa deal - Thursday's gossip",
+      "titleZh": "",
+      "summaryOriginal": "Manager Unai Emery is in line for a new contract with Aston Villa, Trey Nyoni to stay with Liverpool and Leeds target Harvey Elliott, plus more.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cwkgjv582vj0o",
+      "publishedAt": "2026-11-04T21:41:04Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [
+        "liverpool"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "1f5283cc3703fa7d"
+    },
+    {
+      "id": "news-1ada386d1d55358d548e4e9e",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Hearts lose Miller for two months as injuries mount",
+      "titleZh": "",
+      "summaryOriginal": "Heart of Midlothian will be without Calvin Miller for two months after the winger suffered a knee injury that requires surgery in Sunday's Premier Sports Cup semi-final defeat by Hibernian.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cj0406qvzqd3o",
+      "publishedAt": "2026-11-04T19:00:49Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "5cebb2d8de68a804"
+    },
+    {
+      "id": "news-52d4fdabd1019d23d8ff1866",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "An island in mourning: Tenerife processes death of De Miguel",
+      "titleZh": "",
+      "summaryOriginal": "Tenerife football club and the wider football community mourn the loss of footballer Jesus de Miguel following an on-field collision.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/ckx2qz97gz3no",
+      "publishedAt": "2026-11-04T18:51:21Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "328f4c8f4d0a4632"
+    },
+    {
+      "id": "news-a37bb4233740aa04573bbf90",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "How landmark Everton compensation prevented Burnley record loss",
+      "titleZh": "",
+      "summaryOriginal": "Burnley have published promising financial results, but under the hood is a payment from Everton which makes the picture look far less positive.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c893zeq4eln1o",
+      "publishedAt": "2026-11-04T17:48:19Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "ed6a09ef027e56d8"
+    },
+    {
+      "id": "news-4e181852eb41eb21b6659dbd",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Ex-Burnley striker Rodriguez announces retirement",
+      "titleZh": "",
+      "summaryOriginal": "Former Burnley striker Jay Rodriguez announces his retirement from playing career.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cjvgxyn49rq4o",
+      "publishedAt": "2026-11-04T17:28:52Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "66ad3782f356bb5a"
+    },
+    {
+      "id": "news-6dfd6c5c4baa7cbd19e902f2",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Hearts record £2.4m loss in Bloom's first year",
+      "titleZh": "",
+      "summaryOriginal": "Heart of Midlothian record a loss of £2.4m for the year ending 30 June, despite a turnover of more than £23m the first 12 months of Brighton owner Tony Bloom's involvement.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/ckqxnve3jplxo",
+      "publishedAt": "2026-11-04T17:00:49Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "c2d696270e85946b"
+    },
+    {
+      "id": "news-c15068211d28b65f6ff361f0",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "'Most difficult days of my life' for Owono after De Miguel death",
+      "titleZh": "",
+      "summaryOriginal": "FC Andorra goalkeeper Jesus Owono puts out a statement through his club, expressing his sorrow and pain after Tenerife forward Jesus de Miguel's death.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c6zxjz40l280o",
+      "publishedAt": "2026-11-04T16:40:38Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "cf3b832ab7224afa"
+    },
+    {
+      "id": "news-85927f74a7d150fb47e263a7",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Upward path for Penrice has McInnes eager for Rangers deal",
+      "titleZh": "",
+      "summaryOriginal": "Rangers boss Derek McInnes stresses his desire to sign James Penrice on a permanent deal, with the full-back's impact leading to a first Scotland call.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cwly45r47917o",
+      "publishedAt": "2026-11-04T16:38:41Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "c515db377067eef8"
+    },
+    {
+      "id": "news-ae0d3a76ecea2460301264a9",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "72+: The EFL Podcast",
+      "titleZh": "",
+      "summaryOriginal": "Aaron, Jobi and Lyle Taylor talk Scott Parker's taking over West Ham and Derby's issues.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sounds/play/p0pl9kk6",
+      "publishedAt": "2026-11-04T16:15:00Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "7fb60abbdaf3ad19"
+    },
+    {
+      "id": "news-e2b6947c517ba745104fdca0",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Why Man Utd's Roma comeback has echoes of Mourinho and Solskjaer",
+      "titleZh": "",
+      "summaryOriginal": "After their memorable comeback victory against Roma, can Manchester United avoid a repeat of the past and follow that up with a successive victory?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cqx28zjxdxxzo",
+      "publishedAt": "2026-11-04T16:12:46Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "d375626a36269f3a"
+    },
+    {
+      "id": "news-f476e1bd6b08f466b868e5b2",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "What are rules on loan players in Champions League?",
+      "titleZh": "",
+      "summaryOriginal": "BBC Sport's Ask Me Anything team explains the Champions League rules on loan players facing their parent clubs",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cmp8g4jy2pgpo",
+      "publishedAt": "2026-11-04T16:02:08Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "2a9298dc78b82601"
+    },
+    {
+      "id": "news-9d7ab7b6ca5a2e2d5a9db37c",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "NBA buzz: Latest news, updates and intel for the 2026-27 season",
+      "titleZh": "",
+      "summaryOriginal": "The NBA is back. The buzz never left. Bookmark this page for the latest news, rumblings and analysis from ESPN's insiders.",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/nba/story/_/id/50028196/2026-27-nba-buzz-latest-live-updates-news-intel-trades-deals",
+      "publishedAt": "2026-11-04T15:53:51Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "2dbe1b9d1b55e14a"
+    },
+    {
+      "id": "news-979d3b4bed355e7b022fc79d",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Nadal set to join Real Madrid board of directors",
+      "titleZh": "",
+      "summaryOriginal": "Tennis great Rafael Nadal is set to join the board of Spanish football giants Real Madrid.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/articles/cmy56zekeneqo",
+      "publishedAt": "2026-11-04T13:21:01Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "皇家马德里",
+        "足球"
+      ],
+      "teamIds": [
+        "madrid"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "5828aeda38075fbd"
+    },
+    {
+      "id": "news-8f0c2dce87aeea42cb3cb1da",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Real Madrid reach verbal agreement to sign Gabriel",
+      "titleZh": "",
+      "summaryOriginal": "Real Madrid are confident of winning the race to sign Manchester United forward JJ Gabriel after reaching a verbal agreement with the teenager.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cq146dnrn541o",
+      "publishedAt": "2026-11-04T11:49:23Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "皇家马德里",
+        "足球"
+      ],
+      "teamIds": [
+        "madrid"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "bacd623a397e8e70"
+    },
+    {
+      "id": "news-c316087740b3d46730156437",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Wilson returns as Wales call up uncapped Duncan",
+      "titleZh": "",
+      "summaryOriginal": "Harry Wilson is back in Wales' squad for their Nations League matches against Norway and Portugal, while goalkeeper Joe Duncan earns his first call.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cwly4ee53mgyo",
+      "publishedAt": "2026-11-04T10:30:19Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "94e5fc63ee84528d"
+    },
+    {
+      "id": "news-82875d1394b99b8db68f89e8",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Palace lose appeal against Mateta red card",
+      "titleZh": "",
+      "summaryOriginal": "Crystal Palace lose their appeal against Jean-Philippe Mateta's red card in the defeat by Tottenham on Saturday.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cqp9gelp4em2o",
+      "publishedAt": "2026-11-04T10:23:14Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "9a40b4b5ebf7fd59"
+    },
+    {
+      "id": "news-30dd34e4f8c0ee0a277107bd",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "How Carpenter has become Chelsea's surprise star",
+      "titleZh": "",
+      "summaryOriginal": "Ellie Carpenter has become a surprise star for Chelsea this season after a strong start to the Women's Super League campaign.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cw0k0mr7n1l8o",
+      "publishedAt": "2026-11-04T09:55:26Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "aa887ee7f3a9e371"
+    },
+    {
+      "id": "news-29be600f5cd0a4cc4fe876ba",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Why is it going so wrong for Le Bris at Sunderland?",
+      "titleZh": "",
+      "summaryOriginal": "Will qualifying for the Europa League end up costing Sunderland their place in the Premier League at the end of the season?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cm4g1jx8ylveo",
+      "publishedAt": "2026-11-04T08:27:25Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "f98a9e8493a4c154"
+    },
+    {
+      "id": "news-5e1e8c1d1c98c9e6f3fc3848",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Who am I? Plus today's other quizzes",
+      "titleZh": "",
+      "summaryOriginal": "Test your ball knowledge against today's Who Am I?, Five in Five and Brainteaser.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c6jdmg9mkg8mo",
+      "publishedAt": "2026-11-04T07:06:19Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "ac6b1b98cc36ffaf"
+    },
+    {
+      "id": "news-37453232e4a12527b09d3784",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "New strategy launched to transform Scottish women's football over 10 years",
+      "titleZh": "",
+      "summaryOriginal": "The strategy aims to double the number of registered female players in Scotland, while also quadrupling attendances and audiences for matches.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/news/articles/c6ly05y2jwzdo",
+      "publishedAt": "2026-11-04T07:03:05Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "b012fb0ed4e974f1"
+    },
+    {
+      "id": "news-8110f6bdc48ceb54fed2318d",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Off-court turmoil and on-court woes: How the Knicks' title defense got chaotic -- fast",
+      "titleZh": "",
+      "summaryOriginal": "New York has stayed in the headlines -- for all the wrong reasons. Can the 2026 champs bounce back?",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/nba/story/_/id/50360774/new-york-knicks-rings-contracts-losses",
+      "publishedAt": "2026-11-04T03:04:08Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "09d49aca021ab238"
+    },
+    {
+      "id": "news-dd0bcbd134dbd47bd874fc8c",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Fernandes critical of media 'lies' about Carrick relationship",
+      "titleZh": "",
+      "summaryOriginal": "Bruno Fernandes says \"a lot of lies\" have been reported about his relationship with Manchester United head coach Michael Carrick.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cqkg5dgvygr1o",
+      "publishedAt": "2026-11-04T00:45:33Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "5671eb32056c5e34"
+    },
+    {
+      "id": "news-7f96fc0c3b086ee13d846343",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "A half-time speech, a retaken penalty - and a win to save Carrick's job?",
+      "titleZh": "",
+      "summaryOriginal": "At 2-0 down Michael Carrick's position as Manchester United head coach looked terminal - but will the win over Roma prove a turning point?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c6q8n98y4023o",
+      "publishedAt": "2026-11-04T00:27:37Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "b624834e35b8c6a9"
+    },
+    {
+      "id": "news-256095dceb806dc16893d57b",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Emery takes positives, but Villa 'have work to do' to reach Barca level",
+      "titleZh": "",
+      "summaryOriginal": "Aston Villa boss Unai Emery says his team have \"work to do\" to reach Barcelona's level after a 3-0 Champions League defeat at the Nou Camp.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cjwy9496qe7ko",
+      "publishedAt": "2026-11-03T23:58:22Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "barcelona"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "c5a6f365a3fad718"
+    },
+    {
+      "id": "news-de0be48fa392e07b8dfd6a0c",
+      "category": "football",
+      "sourceId": "bbc-champions-league",
+      "sourceName": "BBC Sport · Champions League",
+      "titleOriginal": "Man Utd beat Roma - the other great Champions League comebacks",
+      "titleZh": "",
+      "summaryOriginal": "Manchester United come from two goals down to beat Roma 3-2 - but what are the other best fightbacks in Champions League history?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c64g1dg0d84ko",
+      "publishedAt": "2026-11-03T23:25:20Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "f0379b90fc27c659"
+    },
+    {
+      "id": "news-1420b65138cca740b16d3a9a",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Karabell notebook: On Gobert and Bridges' slow starts, Zion's steals and more",
+      "titleZh": "",
+      "summaryOriginal": "Eric Karabell empties out the notebook with all that he's noticing around the NBA and what it means for fantasy.",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/fantasy/basketball/story/_/id/50370129/fantasy-basketball-trends-nba-2026-2027",
+      "publishedAt": "2026-11-03T18:23:03Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "e2fdfa37514606c8"
+    },
+    {
+      "id": "news-4d4333288fbc5327aa8f3691",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Category specialists: Risacher, Robinson among players to add",
+      "titleZh": "",
+      "summaryOriginal": "Steve Alexander looks at category specialists that might be available to add, including some who fill multiple voids.",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/fantasy/basketball/story/_/id/50359329/fantasy-basketball-category-specialist-waiver-additions",
+      "publishedAt": "2026-11-03T18:23:03Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "9b1a6b3965f8a79c"
+    },
+    {
+      "id": "news-47f61a87d6c0b156f4ede5b5",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Lionesses to face France and Portugal in Nations League",
+      "titleZh": "",
+      "summaryOriginal": "England have been drawn to face France, Austria and Portugal in next year's Women's Nations League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c3vgx8qxge7zo",
+      "publishedAt": "2026-11-03T15:39:21Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "360b769b34159e34"
+    },
+    {
+      "id": "news-d487d777c294341b3541241b",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Shaw among big names to miss out on FifPro World XI",
+      "titleZh": "",
+      "summaryOriginal": "Eyebrows are raised at the announcement of the FifPro Women's World XI shortlist with several big names missing.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c8dx37gxzvgyo",
+      "publishedAt": "2026-11-03T12:28:26Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "541915a06cee5789"
+    },
+    {
+      "id": "news-8f2e2aa65b61afd1733ad74f",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Who has made Troy's Premier League team of the week?",
+      "titleZh": "",
+      "summaryOriginal": "After every round of Premier League matches this season, Troy Deeney gives us his team of the week. Do you agree with his choices?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c8dx37n11kv2o",
+      "publishedAt": "2026-11-02T23:09:36Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "c03a8e0dd9effddd"
+    },
+    {
+      "id": "news-12d1bb49e9aa59f44babaddb",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Jaissle unhappy with 'clear foul' before Barry goal",
+      "titleZh": "",
+      "summaryOriginal": "Newcastle United head coach Matthias Jaissle takes issue with referee John Brooks' decision not to call a \"clear foul\" on Fabian Schar in the build-up to Thierno Barry's goal in their loss to Everton in the Premier League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/c680zn5y19lgo",
+      "publishedAt": "2026-11-02T23:01:13Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "51d5aa6a343b66d5"
+    },
+    {
+      "id": "news-3bd379031e97dfdcc8476808",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "'He's unavailable' - Moyes tight-lipped on Grealish",
+      "titleZh": "",
+      "summaryOriginal": "Everton manager David Moyes' post-match reaction to his side's one-goal win against struggling Newcastle United, as well as the availability of Jack Grealish following disciplinary action.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/ckjwex4v4gq1o",
+      "publishedAt": "2026-11-02T22:54:52Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "98aeb6dcb1edd149"
+    },
+    {
+      "id": "news-2adfbf8eb33cda3bc43b156c",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Everton hold off Newcastle to move into seventh",
+      "titleZh": "",
+      "summaryOriginal": "Thierno Barry scores against Newcastle United for the second time in five days as his Everton side earn a narrow win at St James' Park in the Premier League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/videos/cq5ynd70vlx3o",
+      "publishedAt": "2026-11-02T22:44:30Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "02df66eb8e120fef"
+    },
+    {
+      "id": "news-31d19ee3039b20f994736cc8",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Jaylen Brown shows appreciation for rare, expensive piece in Boston apartment",
+      "titleZh": "",
+      "summaryOriginal": "The Sixers guard's Boston apartment contains possession of some rare pieces.",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/nba/story/_/id/50359641/jaylen-brown-keeping-boston-apartment",
+      "publishedAt": "2026-11-02T19:39:57Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "f56f9df935f09106"
+    },
+    {
+      "id": "news-ec3e0cbed1f9c1f0115cf972",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "BBC Women's Football Weekly",
+      "titleZh": "",
+      "summaryOriginal": "Unbeaten in all competitions, are Sonia Bompastor's side getting back to their best?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sounds/play/p0pkxggd",
+      "publishedAt": "2026-11-02T18:10:00Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "ae0bd3d975b6721c"
+    },
+    {
+      "id": "news-fae8a2fa85cdcc3e59d0d7d8",
+      "category": "nba",
+      "sourceId": "espn-nba",
+      "sourceName": "ESPN NBA",
+      "titleOriginal": "Wide-open title and MVP races: How the NBA has cracked open in just two weeks",
+      "titleZh": "",
+      "summaryOriginal": "The season is still young, but injuries and surprising developments have already changed narratives.",
+      "summaryZh": "",
+      "originalUrl": "https://espn.com/nba/story/_/id/50329551/finals-title-race-injuries-2026-27",
+      "publishedAt": "2026-11-02T15:30:29Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "NBA",
+        "伤病"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "e0fa11f695d64f21"
+    },
+    {
+      "id": "news-dfb31b33c9069e502f4db08f",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Worst in the EFL - the team with a penalty problem",
+      "titleZh": "",
+      "summaryOriginal": "Newport County have scored just two from nine penalties across the past two seasons in all competitions, so what's going wrong?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cred3pgyyl53o",
+      "publishedAt": "2026-11-02T13:56:37Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "c6b2e28627e1f8aa"
+    },
+    {
+      "id": "news-a7ed3ac09991dc747657740d",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Which Premier League players are set for yellow card suspensions?",
+      "titleZh": "",
+      "summaryOriginal": "Hull City's Matt Crooks and Aston Villa's Matty Cash are the first players to receive a one-match ban for accumulating five yellow cards in the 2025-26 Premier League season.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/articles/cr3wj7wg35pxo",
+      "publishedAt": "2026-11-02T09:58:42Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "c6f5a6d435de5cad"
+    },
+    {
+      "id": "news-045f103141504ef05a9d00c5",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Defeat for London City - but is Europe a real possibility?",
+      "titleZh": "",
+      "summaryOriginal": "London City Lionesses suffer defeat by Manchester City but their performance suggests they are closer to Champions League qualification than expected.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cj93z2nk2694o",
+      "publishedAt": "2026-11-01T15:49:47Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [
+        "city"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "867a603ad1caf12a"
+    },
+    {
+      "id": "news-86678d5fb4ce14b69e24bf8f",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Manager ins and outs - 2026-27",
+      "titleZh": "",
+      "summaryOriginal": "BBC Sport tracks all the manager ins and outs in the Premier League, Scottish Premiership, Women's Super League, English Football League and National League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cd94713djgyo",
+      "publishedAt": "2026-11-01T11:11:40Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "546f9f692a59d7f4"
+    },
+    {
+      "id": "news-3bb4a0233dcce569a3b54edf",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Are De Zerbi's Spurs finding elusive consistency?",
+      "titleZh": "",
+      "summaryOriginal": "Are Spurs finally finding elusive consistency under Roberto de Zerbi after a third successive Premier League win, asks chief football writer Phil McNulty?",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c6n04v897qe4o",
+      "publishedAt": "2026-10-31T21:16:11Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "68520974c87e0117"
+    },
+    {
+      "id": "news-a5616eea6ceea5bc2341236d",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "'We fell behind' - what does new San Siro deal mean for AC Milan and Inter?",
+      "titleZh": "",
+      "summaryOriginal": "BBC Sport explores the plans for AC Milan and Inter's new stadium, and how powerful naming rights for new arenas can be",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c84g15r12xn3o",
+      "publishedAt": "2026-10-31T11:18:53Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "b24c6ef265cc5af5"
+    },
+    {
+      "id": "news-50d18d1df020f9fa566b410c",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Which game will Chelsea's Palmer miss after red card?",
+      "titleZh": "",
+      "summaryOriginal": "BBC Sport's Ask Me Anything team explains why Cole Palmer's red card suspension will not rule him out of Chelsea's Premier League match against Manchester United.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cm4g1q54pj20o",
+      "publishedAt": "2026-10-26T14:12:43Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "9e8c6e2fe6529ea9"
+    },
+    {
+      "id": "news-bda583a8999bef617d48e5a5",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Who is close to a yellow card suspension in Champions League?",
+      "titleZh": "",
+      "summaryOriginal": "BBC Sport's Ask Me Anything team explains what the rules are regarding yellow card suspensions in this season's Champions League",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c54g1vpypgw3o",
+      "publishedAt": "2026-10-22T08:54:13Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "欧冠",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "39278f36e91cc708"
+    },
+    {
+      "id": "news-a04ed316c874fe553acf4889",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "All done deals from September-November 2026",
+      "titleZh": "",
+      "summaryOriginal": "Check out the significant signings and departures in the Premier League, Scottish Premiership, EFL and Women's Super League.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/cvgyxyxplkvo",
+      "publishedAt": "2026-10-17T12:53:04Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "68af0bbf4bbad446"
+    },
+    {
+      "id": "news-d244a231408a92e6f63aedda",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Why are some football shin pads so small?",
+      "titleZh": "",
+      "summaryOriginal": "Our Ask Me Anything team explore why some football shin pads are so small, and what the laws are around wearing them.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/football/articles/c8d75jn2057o",
+      "publishedAt": "2026-10-13T12:04:02Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "足球"
+      ],
+      "teamIds": [],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "dc73af7178a03ba4"
+    },
+    {
+      "id": "news-1d01cdb8964774a6c24ec610",
+      "category": "football",
+      "sourceId": "bbc-football",
+      "sourceName": "BBC Sport · Football",
+      "titleOriginal": "Were any current Man City players signed during charges period?",
+      "titleZh": "",
+      "summaryOriginal": "BBC Sport's Ask Me Anything team looks at whether any Manchester City players were signed during the time the club have been found guilty of breaching the Premier League's financial rules.",
+      "summaryZh": "",
+      "originalUrl": "https://bbc.co.uk/sport/articles/cmje5wl5ek32o",
+      "publishedAt": "2026-10-13T10:13:34Z",
+      "fetchedAt": "2026-11-05T05:54:26Z",
+      "tags": [
+        "五大联赛",
+        "英超",
+        "足球"
+      ],
+      "teamIds": [
+        "city"
+      ],
+      "playerIds": [],
+      "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
+      "translationStatus": "pending",
+      "translationFields": {
+        "title": "pending",
+        "summary": "pending"
+      },
+      "contentPolicy": {
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
+      },
+      "isDemo": false,
+      "eventKey": "33251eafa83bd9ad"
+    }
+  ]
 }

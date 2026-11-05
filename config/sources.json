@@ -11,15 +11,15 @@
       "defaultTags": ["NBA"],
       "enabled": true,
       "policy": {
-        "mode": "blocked",
-        "allowHeadlines": false,
-        "allowSummary": false,
-        "allowTitleTranslation": false,
-        "allowSummaryTranslation": false,
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
         "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
         "reviewedAt": "2026-11-05",
         "permissionReference": "",
-        "reason": "RSS 可访问，但许可说明页要求机器人验证，未绕过验证；尚未核实公开存储、转载或翻译许可。只显示来源入口，等待明确许可。"
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
       }
     },
     {
@@ -32,15 +32,15 @@
       "defaultTags": ["足球"],
       "enabled": true,
       "policy": {
-        "mode": "blocked",
-        "allowHeadlines": false,
-        "allowSummary": false,
-        "allowTitleTranslation": false,
-        "allowSummaryTranslation": false,
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
         "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
         "reviewedAt": "2026-11-05",
         "permissionReference": "",
-        "reason": "当前 RSS 使用条款未能完整核实；可查阅的 BBC 官方条款（2022 年版本）对 RSS 改动、元数据提取有约束。未确认公开 JSON、历史保留及翻译许可，只显示来源入口。"
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
       }
     },
     {
@@ -53,15 +53,15 @@
       "defaultTags": ["足球", "欧冠"],
       "enabled": true,
       "policy": {
-        "mode": "blocked",
-        "allowHeadlines": false,
-        "allowSummary": false,
-        "allowTitleTranslation": false,
-        "allowSummaryTranslation": false,
+        "mode": "personal-rss",
+        "allowHeadlines": true,
+        "allowSummary": true,
+        "allowTitleTranslation": true,
+        "allowSummaryTranslation": true,
         "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
         "reviewedAt": "2026-11-05",
         "permissionReference": "",
-        "reason": "与 BBC 足球源适用相同核查限制。当前未确认公开 JSON 聚合、历史保留与翻译许可，只显示来源入口。"
+        "reason": "个人 RSS 阅读配置，由用户主动启用；不代表已取得发布方额外授权。仅展示 RSS 标题与短摘要，中文由离线机器翻译，新闻事实以原文为准。"
       }
     }
   ]

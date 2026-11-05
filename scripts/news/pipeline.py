@@ -38,7 +38,11 @@ def check_sources(sources):
         ids.add(source["id"])
         policy = source["policy"]
         if policy["allowHeadlines"] and (
-            policy["mode"] == "blocked" or not policy["permissionReference"].strip()
+            policy["mode"] == "blocked"
+            or (
+                policy["mode"] != "personal-rss"
+                and not policy["permissionReference"].strip()
+            )
         ):
             raise ValueError("Public headlines require a recorded permission reference")
         if policy["allowSummaryTranslation"] and not policy["allowSummary"]:
@@ -276,7 +280,10 @@ def run_update(
             "homepageUrl": source["homepageUrl"],
             "fetchStatus": "disabled",
             "publicationStatus": (
-                "allowed" if source["policy"]["allowHeadlines"] else "blocked"
+                "user-enabled"
+                if source["policy"]["mode"] == "personal-rss"
+                and source["policy"]["allowHeadlines"]
+                else "allowed" if source["policy"]["allowHeadlines"] else "blocked"
             ),
             "lastSuccessAt": prev.get("lastSuccessAt"),
             "lastError": None,

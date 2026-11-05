@@ -158,12 +158,12 @@ export function Settings() {
           <p>版本 2.0.0 · RSS 与离线翻译链路</p>
           <p>
             一个为 NBA 与足球爱好者设计的个人新闻阅读 PWA。新闻由 GitHub Actions
-            检查 RSS，按来源许可控制公开展示和翻译。配图为自产 SVG
+            获取 RSS，保留来源与原文链接，中文由离线机器翻译。配图为自产 SVG
             插画，非新闻现场照片。
           </p>
           <p>
-            不抓取新闻全文，不转载未经许可的摘要或图片。Argos
-            仅在允许时做离线英中翻译；视频与讨论继续预留。
+            仅处理 RSS
+            提供的标题与短摘要，不抓取新闻全文或下载新闻图片。个人阅读配置不代表发布方授权；机器翻译可能有误。视频与讨论继续预留。
           </p>
           <button className="primary-button" onClick={() => setDialog(null)}>
             继续热爱

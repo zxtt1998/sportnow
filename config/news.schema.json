@@ -40,7 +40,12 @@
       ],
       "properties": {
         "mode": {
-          "enum": ["blocked", "headlines-only", "licensed-translation"]
+          "enum": [
+            "blocked",
+            "headlines-only",
+            "licensed-translation",
+            "personal-rss"
+          ]
         },
         "allowHeadlines": {
           "type": "boolean"

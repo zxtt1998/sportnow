@@ -43,7 +43,8 @@ function fetchSuccess(news = newsFixture(), cache = false) {
 }
 describe("canonical production data validation", () => {
   it("keeps frontend entity tags aligned with the maintained glossary", () => {
-    for (const entity of glossary.entities) expect(getEntity(entity.id)?.name).toBe(entity.zh);
+    for (const entity of glossary.entities)
+      expect(getEntity(entity.id)?.name).toBe(entity.zh);
   });
   it("keeps English fallback and omits absent summaries", () => {
     const document = parseNewsDocument(newsFixture());
@@ -51,6 +52,29 @@ describe("canonical production data validation", () => {
     expect(a.title).toBe(a.englishTitle);
     expect(a.summary).toBe("");
     expect(a.paragraphs).toEqual([]);
+  });
+  it("accepts explicit personal RSS configuration without inventing publisher permission", () => {
+    const article = articleFixture();
+    article.contentPolicy = {
+      ...article.contentPolicy,
+      mode: "personal-rss",
+      permissionReference: "",
+      allowSummary: true,
+      allowTitleTranslation: true,
+      allowSummaryTranslation: true,
+    };
+    article.titleZh = "自有测试标题";
+    article.summaryOriginal = "Owned test summary.";
+    article.summaryZh = "自有测试摘要。";
+    const news = parseNewsDocument(newsFixture([article]));
+    const status = statusFixture(news);
+    status.sources[0].publicationStatus = "user-enabled";
+    expect(parseSourcesStatus(status, news).sources[0].publicationStatus).toBe(
+      "user-enabled",
+    );
+    expect(toArticleView(news.articles[0]).title).toBe(article.titleZh);
+    article.contentPolicy.mode = "licensed-translation";
+    expect(() => parseNewsDocument(newsFixture([article]))).toThrow();
   });
   it("rejects demos, dangerous links, duplicate identities and unauthorized translations", () => {
     for (const mutate of [

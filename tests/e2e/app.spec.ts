@@ -2,9 +2,10 @@ import { expect, test } from "@playwright/test";
 import { randomUUID } from "node:crypto";
 import { articleFixture, newsFixture, statusFixture } from "../fixtures";
 import type { Article } from "../../src/types";
-const licensed = {
+const personal = {
   ...articleFixture().contentPolicy,
-  mode: "licensed-translation" as const,
+  mode: "personal-rss" as const,
+  permissionReference: "",
   allowSummary: true,
   allowTitleTranslation: true,
   allowSummaryTranslation: true,
@@ -14,7 +15,7 @@ const rows: Article[] = [
     titleZh: "马刺训练计划（自有测试内容）",
     summaryOriginal: "This is an owned test summary.",
     summaryZh: "这是自有测试摘要。",
-    contentPolicy: licensed,
+    contentPolicy: personal,
     translationStatus: "translated",
     translationFields: { title: "translated", summary: "translated" },
   }),
@@ -27,7 +28,7 @@ const rows: Article[] = [
     teamIds: ["madrid"],
     playerIds: ["mbappe"],
     tags: ["皇家马德里", "欧冠", "五大联赛"],
-    contentPolicy: licensed,
+    contentPolicy: personal,
     eventKey: "madrid-event",
   }),
   articleFixture({
@@ -297,9 +298,21 @@ test("bookmarks retain a local snapshot after an article leaves the 30-day catal
   ).toBeVisible();
 });
 
-test("production policy-blocked data displays source links without demo news", async ({
+test("empty data displays source links without demo news", async ({
   page,
+  context,
 }) => {
+  await prepare(page, context);
+  const news = newsFixture([]);
+  const status = statusFixture(news);
+  status.sources[0] = {
+    ...status.sources[0],
+    sourceId: "espn-nba",
+    sourceName: "ESPN NBA",
+    homepageUrl: "https://www.espn.com/nba/",
+    publicationStatus: "user-enabled",
+  };
+  await page.request.post("/__test/news", { data: { news, status } });
   await page.goto("/");
   await expect(
     page.getByRole("heading", { name: "你的热爱，直达原站。" }),
@@ -311,5 +324,5 @@ test("production policy-blocked data displays source links without demo news", a
   await expect(page.locator(".article-card")).toHaveCount(0);
   await page.goto("/#/profile?tab=settings");
   await expect(page.getByText("0 篇 · NBA 0 · 足球 0")).toBeVisible();
-  await expect(page.getByText("尚无获准公开的新闻")).toBeVisible();
+  await expect(page.getByText("尚无新闻更新")).toBeVisible();
 });
