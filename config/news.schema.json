@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "articles",
+    "revision"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "articles": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/$defs/article"
+      }
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "$defs": {
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "allowHeadlines",
+        "allowSummary",
+        "allowTitleTranslation",
+        "allowSummaryTranslation",
+        "licenseUrl",
+        "reviewedAt",
+        "permissionReference",
+        "reason"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "blocked",
+            "headlines-only",
+            "licensed-translation"
+          ]
+        },
+        "allowHeadlines": {
+          "type": "boolean"
+        },
+        "allowSummary": {
+          "type": "boolean"
+        },
+        "allowTitleTranslation": {
+          "type": "boolean"
+        },
+        "allowSummaryTranslation": {
+          "type": "boolean"
+        },
+        "licenseUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "reviewedAt": {
+          "type": "string"
+        },
+        "permissionReference": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "article": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "sourceId",
+        "sourceName",
+        "titleOriginal",
+        "titleZh",
+        "summaryOriginal",
+        "summaryZh",
+        "originalUrl",
+        "publishedAt",
+        "fetchedAt",
+        "tags",
+        "teamIds",
+        "playerIds",
+        "translationStatus",
+        "translationFields",
+        "contentPolicy",
+        "isDemo",
+        "eventKey"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^news-[a-f0-9]{24}$"
+        },
+        "category": {
+          "enum": [
+            "nba",
+            "football"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "titleOriginal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "titleZh": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "summaryOriginal": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "summaryZh": {
+          "type": "string",
+          "maxLength": 6000
+        },
+        "originalUrl": {
+          "type": "string",
+          "pattern": "^https://",
+          "format": "uri"
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "fetchedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "teamIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "playerIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "translationStatus": {
+          "enum": [
+            "translated",
+            "partial",
+            "unavailable",
+            "failed",
+            "skipped_policy",
+            "pending"
+          ]
+        },
+        "translationFields": {
+          "type": "object",
+          "required": [
+            "title",
+            "summary"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "summary": {
+              "type": "string"
+            }
+          }
+        },
+        "contentPolicy": {
+          "$ref": "#/$defs/policy"
+        },
+        "isDemo": {
+          "const": false
+        },
+        "eventKey": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

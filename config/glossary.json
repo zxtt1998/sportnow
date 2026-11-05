@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "entities": [
+    { "id": "spurs", "kind": "team", "category": "nba", "zh": "圣安东尼奥马刺", "aliases": ["San Antonio Spurs", "Spurs"] },
+    { "id": "lakers", "kind": "team", "category": "nba", "zh": "洛杉矶湖人", "aliases": ["Los Angeles Lakers", "Lakers"] },
+    { "id": "warriors", "kind": "team", "category": "nba", "zh": "金州勇士", "aliases": ["Golden State Warriors", "Warriors"] },
+    { "id": "celtics", "kind": "team", "category": "nba", "zh": "波士顿凯尔特人", "aliases": ["Boston Celtics", "Celtics"] },
+    { "id": "wembanyama", "kind": "player", "category": "nba", "zh": "维克托·文班亚马", "aliases": ["Victor Wembanyama", "Wembanyama"] },
+    { "id": "duncan", "kind": "player", "category": "nba", "zh": "蒂姆·邓肯", "aliases": ["Tim Duncan"] },
+    { "id": "curry", "kind": "player", "category": "nba", "zh": "斯蒂芬·库里", "aliases": ["Stephen Curry", "Steph Curry"] },
+    { "id": "madrid", "kind": "team", "category": "football", "zh": "皇家马德里", "aliases": ["Real Madrid"] },
+    { "id": "barcelona", "kind": "team", "category": "football", "zh": "巴塞罗那", "aliases": ["FC Barcelona", "Barcelona"] },
+    { "id": "city", "kind": "team", "category": "football", "zh": "曼彻斯特城", "aliases": ["Manchester City", "Man City"] },
+    { "id": "liverpool", "kind": "team", "category": "football", "zh": "利物浦", "aliases": ["Liverpool"] },
+    { "id": "bayern", "kind": "team", "category": "football", "zh": "拜仁慕尼黑", "aliases": ["Bayern Munich", "Bayern München"] },
+    { "id": "ronaldo", "kind": "player", "category": "football", "zh": "克里斯蒂亚诺·罗纳尔多", "aliases": ["Cristiano Ronaldo", "CR7"] },
+    { "id": "mbappe", "kind": "player", "category": "football", "zh": "基利安·姆巴佩", "aliases": ["Kylian Mbappé", "Kylian Mbappe", "Mbappé", "Mbappe"] }
+  ],
+  "competitions": [
+    { "zh": "欧冠", "aliases": ["UEFA Champions League", "Champions League"] },
+    { "zh": "英超", "aliases": ["Premier League"] },
+    { "zh": "西甲", "aliases": ["La Liga", "LaLiga"] },
+    { "zh": "德甲", "aliases": ["Bundesliga"] },
+    { "zh": "意甲", "aliases": ["Serie A"] },
+    { "zh": "法甲", "aliases": ["Ligue 1"] }
+  ],
+  "topics": [
+    { "zh": "交易", "category": "nba", "aliases": ["trade", "trades", "traded", "trading"] },
+    { "zh": "伤病", "category": "nba", "aliases": ["injury", "injured", "injuries", "surgery", "concussion", "ruled out"] },
+    { "zh": "转会", "category": "football", "aliases": ["transfer", "transfers", "signing", "loan move"] }
+  ]
+}

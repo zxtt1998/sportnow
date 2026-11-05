@@ -1,0 +1,37 @@
+"""Download only the pinned en->zh package; failure never blocks feed publication."""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+import os
+import time
+from pathlib import Path
+from .model import atomic_json
+from .translation import SETTINGS
+
+def prepare():
+    import argostranslate.package
+    installed=argostranslate.package.get_installed_packages()
+    existing=next((p for p in installed if p.from_code=='en' and p.to_code=='zh' and str(p.package_version)==SETTINGS['modelVersion']),None)
+    if existing:return {'available':True,'cached':True,'modelVersion':SETTINGS['modelVersion']}
+    argostranslate.package.update_package_index()
+    package=next((p for p in argostranslate.package.get_available_packages() if p.from_code=='en' and p.to_code=='zh' and str(p.package_version)==SETTINGS['modelVersion']),None)
+    if not package:raise RuntimeError('Pinned en->zh model not found in the official Argos index')
+    path=package.download()
+    if not path:raise RuntimeError('Model download returned no file')
+    expected=SETTINGS.get('modelSha256')
+    checksum=hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    if expected and checksum!=expected:raise RuntimeError('Model archive checksum mismatch')
+    argostranslate.package.install_from_path(path)
+    return {'available':True,'cached':False,'modelVersion':SETTINGS['modelVersion'],'archiveSha256':checksum,'downloadBytes':Path(path).stat().st_size}
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--strict',action='store_true');parser.add_argument('--report',type=Path);args=parser.parse_args()
+    start=time.monotonic()
+    try:result=prepare()
+    except Exception as error:
+        result={'available':False,'error':type(error).__name__+': '+str(error)[:400]}
+    result['seconds']=round(time.monotonic()-start,2)
+    if args.report:atomic_json(args.report,result)
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+    if args.strict and not result['available']:raise SystemExit(1)

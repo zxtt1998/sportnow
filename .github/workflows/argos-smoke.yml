@@ -1,0 +1,32 @@
+name: Verify Argos English-Chinese on Ubuntu
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sportnow-argos-smoke
+  cancel-in-progress: false
+jobs:
+  offline-translation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/argos-setup
+      - name: Translate only project-owned test sentences
+        env:
+          XDG_DATA_HOME: ${{ github.workspace }}/.cache/argos/data
+          XDG_CACHE_HOME: ${{ github.workspace }}/.cache/argos/cache
+          ARGOS_DEVICE_TYPE: cpu
+          ARGOS_INTRA_THREADS: '2'
+          ARGOS_INTER_THREADS: '1'
+        run: timeout 180s python -m scripts.news.test_argos --report /tmp/argos-smoke-report.json
+      - name: Retain actual smoke evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: argos-ubuntu-evidence
+          path: |
+            /tmp/argos-model-report.json
+            /tmp/argos-smoke-report.json
+          if-no-files-found: ignore

@@ -8,3 +8,8 @@ playwright-report/
 *.tsbuildinfo
 
 .pnpm-store/
+
+.cache/
+.venv/
+__pycache__/
+*.pyc

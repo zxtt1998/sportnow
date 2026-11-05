@@ -1,0 +1,13 @@
+{
+  "engine": "argos",
+  "libraryVersion": "1.11.0",
+  "fromCode": "en",
+  "toCode": "zh",
+  "modelVersion": "1.9",
+  "maxArticlesPerRun": 12,
+  "maxSecondsPerField": 25,
+  "maxCharactersPerField": 1600,
+  "maxRunSeconds": 300,
+  "glossaryVersion": 1,
+  "modelSha256": "433e7c4f034d87fbe2353161e05f18646d7999452f801a4e1f0378522b9850ab"
+}
