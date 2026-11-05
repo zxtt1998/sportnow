@@ -2,31 +2,67 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "id": "espn-nba", "name": "ESPN NBA", "category": "nba",
-      "feedUrl": "https://www.espn.com/espn/rss/nba/news", "homepageUrl": "https://www.espn.com/nba/",
-      "articleHosts": ["espn.com", "espn.co.uk"], "defaultTags": ["NBA"],
+      "id": "espn-nba",
+      "name": "ESPN NBA",
+      "category": "nba",
+      "feedUrl": "https://www.espn.com/espn/rss/nba/news",
+      "homepageUrl": "https://www.espn.com/nba/",
+      "articleHosts": ["espn.com", "espn.co.uk"],
+      "defaultTags": ["NBA"],
       "enabled": true,
-      "policy": { "mode": "blocked", "allowHeadlines": false, "allowSummary": false, "allowTitleTranslation": false, "allowSummaryTranslation": false,
-        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo", "reviewedAt": "2026-11-05", "permissionReference": "",
-        "reason": "RSS 可访问，但许可说明页要求机器人验证，未绕过验证；尚未核实公开存储、转载或翻译许可。只显示来源入口，等待明确许可。" }
+      "policy": {
+        "mode": "blocked",
+        "allowHeadlines": false,
+        "allowSummary": false,
+        "allowTitleTranslation": false,
+        "allowSummaryTranslation": false,
+        "licenseUrl": "https://www.espn.com/espn/news/story?page=rssinfo",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "RSS 可访问，但许可说明页要求机器人验证，未绕过验证；尚未核实公开存储、转载或翻译许可。只显示来源入口，等待明确许可。"
+      }
     },
     {
-      "id": "bbc-football", "name": "BBC Sport · Football", "category": "football",
-      "feedUrl": "https://feeds.bbci.co.uk/sport/football/rss.xml", "homepageUrl": "https://www.bbc.com/sport/football",
-      "articleHosts": ["bbc.co.uk", "bbc.com"], "defaultTags": ["足球"],
+      "id": "bbc-football",
+      "name": "BBC Sport · Football",
+      "category": "football",
+      "feedUrl": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+      "homepageUrl": "https://www.bbc.com/sport/football",
+      "articleHosts": ["bbc.co.uk", "bbc.com"],
+      "defaultTags": ["足球"],
       "enabled": true,
-      "policy": { "mode": "blocked", "allowHeadlines": false, "allowSummary": false, "allowTitleTranslation": false, "allowSummaryTranslation": false,
-        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds", "reviewedAt": "2026-11-05", "permissionReference": "",
-        "reason": "BBC RSS 指向的条款限制提取元数据、修改 RSS。未取得把条目转换为公开 JSON、保留历史或翻译的明确许可；只显示来源入口。" }
+      "policy": {
+        "mode": "blocked",
+        "allowHeadlines": false,
+        "allowSummary": false,
+        "allowTitleTranslation": false,
+        "allowSummaryTranslation": false,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "当前 RSS 使用条款未能完整核实；可查阅的 BBC 官方条款（2022 年版本）对 RSS 改动、元数据提取有约束。未确认公开 JSON、历史保留及翻译许可，只显示来源入口。"
+      }
     },
     {
-      "id": "bbc-champions-league", "name": "BBC Sport · Champions League", "category": "football",
-      "feedUrl": "https://feeds.bbci.co.uk/sport/football/champions-league/rss.xml", "homepageUrl": "https://www.bbc.com/sport/football/champions-league",
-      "articleHosts": ["bbc.co.uk", "bbc.com"], "defaultTags": ["足球", "欧冠"],
+      "id": "bbc-champions-league",
+      "name": "BBC Sport · Champions League",
+      "category": "football",
+      "feedUrl": "https://feeds.bbci.co.uk/sport/football/champions-league/rss.xml",
+      "homepageUrl": "https://www.bbc.com/sport/football/champions-league",
+      "articleHosts": ["bbc.co.uk", "bbc.com"],
+      "defaultTags": ["足球", "欧冠"],
       "enabled": true,
-      "policy": { "mode": "blocked", "allowHeadlines": false, "allowSummary": false, "allowTitleTranslation": false, "allowSummaryTranslation": false,
-        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds", "reviewedAt": "2026-11-05", "permissionReference": "",
-        "reason": "与 BBC 足球源适用相同许可限制。未取得公开 JSON 聚合与翻译许可；只显示来源入口。" }
+      "policy": {
+        "mode": "blocked",
+        "allowHeadlines": false,
+        "allowSummary": false,
+        "allowTitleTranslation": false,
+        "allowSummaryTranslation": false,
+        "licenseUrl": "https://www.bbc.co.uk/usingthebbc/terms-of-use/#15metadataandrssfeeds",
+        "reviewedAt": "2026-11-05",
+        "permissionReference": "",
+        "reason": "与 BBC 足球源适用相同核查限制。当前未确认公开 JSON 聚合、历史保留与翻译许可，只显示来源入口。"
+      }
     }
   ]
 }

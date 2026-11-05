@@ -9,5 +9,11 @@
   "maxCharactersPerField": 1600,
   "maxRunSeconds": 300,
   "glossaryVersion": 1,
-  "modelSha256": "433e7c4f034d87fbe2353161e05f18646d7999452f801a4e1f0378522b9850ab"
+  "modelSha256": "433e7c4f034d87fbe2353161e05f18646d7999452f801a4e1f0378522b9850ab",
+  "sentenceSplitter": {
+    "engine": "stanza",
+    "version": "1.10.1",
+    "resourcesVersion": "1.10.0",
+    "language": "en"
+  }
 }

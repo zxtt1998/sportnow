@@ -2,12 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "schemaVersion",
-    "generatedAt",
-    "articles",
-    "revision"
-  ],
+  "required": ["schemaVersion", "generatedAt", "articles", "revision"],
   "properties": {
     "schemaVersion": {
       "const": 2
@@ -45,11 +40,7 @@
       ],
       "properties": {
         "mode": {
-          "enum": [
-            "blocked",
-            "headlines-only",
-            "licensed-translation"
-          ]
+          "enum": ["blocked", "headlines-only", "licensed-translation"]
         },
         "allowHeadlines": {
           "type": "boolean"
@@ -100,7 +91,8 @@
         "translationFields",
         "contentPolicy",
         "isDemo",
-        "eventKey"
+        "eventKey",
+        "translationVersion"
       ],
       "properties": {
         "id": {
@@ -108,10 +100,7 @@
           "pattern": "^news-[a-f0-9]{24}$"
         },
         "category": {
-          "enum": [
-            "nba",
-            "football"
-          ]
+          "enum": ["nba", "football"]
         },
         "sourceId": {
           "type": "string",
@@ -184,10 +173,7 @@
         },
         "translationFields": {
           "type": "object",
-          "required": [
-            "title",
-            "summary"
-          ],
+          "required": ["title", "summary"],
           "additionalProperties": false,
           "properties": {
             "title": {
@@ -205,6 +191,9 @@
           "const": false
         },
         "eventKey": {
+          "type": "string"
+        },
+        "translationVersion": {
           "type": "string"
         }
       }
