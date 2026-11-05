@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T05:54:26Z",
-  "revision": "6e662bc559743671c90a73944eca69f1aa410a728cb481a2b6b5b3713c725706",
+  "generatedAt": "2026-11-05T06:00:15Z",
+  "revision": "c486e9128a5979a35161c6035be3c8334fe5983571ec28193a0ad60a054a79db",
   "articles": [
     {
       "id": "news-5e236747407bf159d63c7d03",
@@ -390,7 +390,7 @@
       "titleOriginal": "Why Iraola's Liverpool are still a work in progress",
       "titleZh": "为什么伊劳拉的利物浦还在进行中",
       "summaryOriginal": "Champions League analyst Stephen Warnock and Guillem Balague believe Liverpool's defensive weaknesses combined with the experimentation of playing Bradley Barcola up front, highlight Andoni Iraola's team are still trying to find their identity following a 3-2 defeat to Fenerbahce in the Champions League.",
-      "summaryZh": "",
+      "summaryZh": "欧冠分析师斯蒂芬·沃诺克(Stephen Warnock)和吉列姆·巴拉格(Guillem Balague)认为利物浦的防守弱点与前方出演布拉德利·巴可拉(Bradley Barcola)的实验相结合,突出安多尼·伊劳拉的团队在欧冠以3比2击败费内尔巴赫斯后仍试图寻找身份.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/c9rky37kx37lo",
       "publishedAt": "2026-11-04T23:22:35Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -403,10 +403,10 @@
       ],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "partial",
+      "translationStatus": "translated",
       "translationFields": {
         "title": "translated",
-        "summary": "failed"
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -465,9 +465,9 @@
       "sourceId": "bbc-football",
       "sourceName": "BBC Sport · Football",
       "titleOriginal": "Scotland U21 boss hails Donovan, Miller and Wilson attitude",
-      "titleZh": "",
+      "titleZh": "苏格兰U21老板称赞多诺万 米勒和威尔逊的态度",
       "summaryOriginal": "Under-21s head coach Tony Docherty is delighted with the buy-in from the three players who have dropped down from Scotland's senior squad.",
-      "summaryZh": "",
+      "summaryZh": "21岁以下主教练托尼·多彻蒂(英语:Tony Docherty (film))对从苏格兰高班降级的三名球员的收买感到高兴.",
       "originalUrl": "https://bbc.co.uk/sport/football/articles/ckyvrzgl9dqgo",
       "publishedAt": "2026-11-04T23:18:03Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -477,10 +477,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -502,9 +502,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Viking run riot against Sabah to boost qualification hopes",
-      "titleZh": "",
+      "titleZh": "维京对沙巴发动暴动 提升资格的希望",
       "summaryOriginal": "Viking come from behind to beat 10-man Sabah and get their first win of the league phase in this season's Champions League.",
-      "summaryZh": "",
+      "summaryZh": "维京从后方赶来击败10人沙巴并获得本赛季欧冠联赛阶段的首个入球.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/cv8ezggrg24yo",
       "publishedAt": "2026-11-04T23:17:54Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -515,10 +515,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -540,9 +540,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Como score nine to make Champions League history",
-      "titleZh": "",
+      "titleZh": "科莫分出九分 创造了欧冠历史",
       "summaryOriginal": "Anastasios Douvikas scores a hat-trick as Como produce a stunning 9-1 away win over Lens on match day four, recording the biggest away win in Champions League history.",
-      "summaryZh": "",
+      "summaryZh": "Anastasios Douvikas的得分是一分一分 科莫在第四场比赛中以9比1战胜了Lens 记录了欧冠史上最大的领先胜负",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/c6wyr8gzzr1zo",
       "publishedAt": "2026-11-04T22:45:45Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -553,10 +553,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -578,9 +578,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Another 'miracle' in Istanbul - but this one hurt Liverpool",
-      "titleZh": "",
+      "titleZh": "伊斯坦布尔的又一\"奇迹\" 但这个伤害了利物浦",
       "summaryOriginal": "Liverpool conceded \"cheap\" and \"messy\" goals in their defeat by Fenerbahce, says boss Andoni Iraola, as former Reds hero Dirk Kuyt celebrates a \"miracle\" in Istanbul.",
-      "summaryZh": "",
+      "summaryZh": "利物浦承认Fenerbahce击败\"便宜\"和\"迷思\"的目标,",
       "originalUrl": "https://bbc.co.uk/sport/football/articles/cwx28z712rd8o",
       "publishedAt": "2026-11-04T22:38:24Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -593,10 +593,10 @@
       ],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -618,9 +618,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Dortmund take narrow win over Real Betis",
-      "titleZh": "",
+      "titleZh": "多特蒙德对真贝蒂斯的狭隘取胜",
       "summaryOriginal": "Borussia Dortmund gain a home victory over Real Betis to end the Spanish side's winning run in the Champions League.",
-      "summaryZh": "",
+      "summaryZh": "Borussia Dortmund在欧冠比赛中以主场战胜了Real Betis以结束西班牙一方的取胜跑道.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/c699zjkd7yrvo",
       "publishedAt": "2026-11-04T22:31:57Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -631,10 +631,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -656,9 +656,9 @@
       "sourceId": "espn-nba",
       "sourceName": "ESPN NBA",
       "titleOriginal": "Updated NBA Power Rankings: Summing up the starts for all 30 teams",
-      "titleZh": "",
+      "titleZh": "最新NBA实力排名:总结所有30支球队的起站点",
       "summaryOriginal": "Here's where every team ranks after two weeks of action, plus the four words used to describe how each team has started the season.",
-      "summaryZh": "",
+      "summaryZh": "以下是每支球队在行动两周后排名,外加用来描述每支球队如何开始赛季的4个单词.",
       "originalUrl": "https://espn.com/nba/story/_/id/50371604/nba-power-rankings-30-teams-rank-week-two-describe-season",
       "publishedAt": "2026-11-04T22:20:54Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -668,10 +668,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -693,9 +693,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Emphatic Porto thrash Napoli in second-half romp",
-      "titleZh": "",
+      "titleZh": "二分之一的纳波利港",
       "summaryOriginal": "Porto score three goals in the final 20 minutes of the game to pull away and seal a comfortable victory against Napoli, who are unable to match their Portuguese opponents in the second half.",
-      "summaryZh": "",
+      "summaryZh": "波尔图在最后20分钟的比赛中打出3个入球来拉开并封印一个舒适的胜利来对抗下半场无法与葡萄牙对手相匹敌的纳波利.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/cr1ex9vx3y50o",
       "publishedAt": "2026-11-04T22:17:34Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -706,10 +706,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -731,9 +731,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Haaland scores winner as Man City beat Leipzig",
-      "titleZh": "",
+      "titleZh": "哈兰德以曼彻斯特城击败莱比锡的成绩获得冠军.",
       "summaryOriginal": "Erling Haaland scores the winning goal as Manchester City overcome being pegged back twice to beat RB Leipzig 3-2 on match day four of the UEFA Champions League group phase.",
-      "summaryZh": "",
+      "summaryZh": "埃林·哈兰以曼彻斯特城两度被接回后击败RB莱比锡3-2的成绩打入了取胜入球. 欧冠小组赛阶段的第四个比赛日.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/ckz65ey5q29zo",
       "publishedAt": "2026-11-04T22:15:31Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -746,10 +746,10 @@
       ],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -771,9 +771,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Arsenal survive late Slavia scare for hard-fought win",
-      "titleZh": "",
+      "titleZh": "阿森纳活下来了 斯拉维亚晚期的恐惧,为难取胜",
       "summaryOriginal": "Arsenal earn their third win from four in the Champions League as goals from Noni Madueke and Victor Gyokeres are too much for Slavia Prague, despite a valiant late fight from the hosts to get back into the game.",
-      "summaryZh": "",
+      "summaryZh": "阿森纳从欧冠的四场比赛中以诺尼·马杜埃克和维克多·焦克雷斯的入球赢得了他们的第三名取胜,对斯拉维娅·布拉格来说是太多了,尽管东道主们为重返比赛而进行了英勇的晚打.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/cq4g1jwnzmyro",
       "publishedAt": "2026-11-04T22:10:07Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -784,10 +784,10 @@
       "teamIds": [],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -809,9 +809,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Liverpool crumble at Kuyt's Fenerbahce",
-      "titleZh": "",
+      "titleZh": "利物浦 在库伊特的Fenerbahce倒闭",
       "summaryOriginal": "Liverpool are defeated by Turkish side Fenerbahce, who twice fought back from behind to seal a famous victory, ending the Reds' perfect start to this year's Champions League after four games.",
-      "summaryZh": "",
+      "summaryZh": "利物浦被土耳其方面Fenerbahce所击败,Fenerbahce两次从后方反击以封印出名的胜利,结束了红军在四场比赛后完美地开始今年的欧冠.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/cqy7ljmzx6d6o",
       "publishedAt": "2026-11-04T22:04:16Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -824,10 +824,10 @@
       ],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
@@ -849,9 +849,9 @@
       "sourceId": "bbc-champions-league",
       "sourceName": "BBC Sport · Champions League",
       "titleOriginal": "Valverde stunner earns Real Madrid late win at AEK Athens",
-      "titleZh": "",
+      "titleZh": "Valverde Stunner在雅典赢得了皇家马德里的胜利",
       "summaryOriginal": "Real Madrid continue their 100% start to their Champions League campaign with another late win, this time through captain Federico Valverde to inflict Athens' third loss in a row.",
-      "summaryZh": "",
+      "summaryZh": "皇家马德里继续100%地开始他们的欧冠战役,以又一场后期取胜,这次是通过Federico Valverde队长连续给雅典造成第三次损失.",
       "originalUrl": "https://bbc.co.uk/sport/football/videos/ck7vpj0ggqr8o",
       "publishedAt": "2026-11-04T22:04:13Z",
       "fetchedAt": "2026-11-05T05:54:26Z",
@@ -865,10 +865,10 @@
       ],
       "playerIds": [],
       "translationVersion": "argos:1.11.0:1.9:gf3b9fb1a4e78",
-      "translationStatus": "pending",
+      "translationStatus": "translated",
       "translationFields": {
-        "title": "pending",
-        "summary": "pending"
+        "title": "translated",
+        "summary": "translated"
       },
       "contentPolicy": {
         "mode": "personal-rss",
